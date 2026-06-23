@@ -4698,3 +4698,46 @@ body {
     padding-top: 70px;
   }
 }
+
+/* FIX HEADER MOBILE REAL - TESTE */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .brand {
+    min-width: 0;
+    flex-shrink: 0;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .brand strong {
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+}
