@@ -4769,26 +4769,146 @@ body {
   }
 }
 
-/* TESTE DIRETO MENU */
+/* ========================================
+   HEADER RESPONSIVO FINAL
+   Desktop normal + Mobile real correto
+======================================== */
 
-.nav {
-  display: none !important;
-}
-
+/* Desktop */
 .menu-btn {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
-.nav.is-open {
-  display: flex !important;
-  position: fixed !important;
-  top: 82px;
-  left: 0;
-  right: 0;
-  flex-direction: column;
-  padding: 24px;
-  background: #050505;
-  z-index: 99999;
+/* Mobile / tablet */
+@media screen and (max-width: 1180px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 82px;
+    padding: 0 7vw;
+    z-index: 99999;
+    overflow: visible;
+  }
+
+  body {
+    padding-top: 82px;
+  }
+
+  .brand {
+    max-width: calc(100% - 70px);
+    flex-shrink: 1;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .brand strong {
+    font-size: 1.6rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .nav {
+    display: none !important;
+  }
+
+  .nav.is-open {
+    position: fixed;
+    top: 82px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 24px 7vw 30px;
+    background: rgba(5,5,5,.98);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 24px 70px rgba(0,0,0,.45);
+  }
+
+  .nav.is-open a {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+
+  .nav.is-open a::after {
+    display: none;
+  }
+
+  .nav.is-open .nav-cta {
+    width: 100%;
+    justify-content: center;
+    margin-top: 14px;
+    padding: 15px 20px;
+  }
+}
+
+/* Celulares menores */
+@media screen and (max-width: 480px) {
+  .site-header {
+    height: 76px;
+    padding: 0 6vw;
+  }
+
+  body {
+    padding-top: 76px;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand strong {
+    font-size: 1.3rem;
+  }
+
+  .menu-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav.is-open {
+    top: 76px;
+    padding: 22px 6vw 28px;
+  }
+}
+
+/* iPhone bem pequeno */
+@media screen and (max-width: 390px) {
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand strong {
+    font-size: 1.15rem;
+  }
 }
