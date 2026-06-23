@@ -4949,3 +4949,124 @@ html.aj-mobile h1 {
 html.aj-mobile h2 {
   font-size: clamp(2.1rem, 10vw, 3.4rem) !important;
 }
+
+/* ========================================
+   HOME MOBILE REAL - AJUSTES FINOS
+======================================== */
+
+/* Corrige área dos cards abaixo da hero */
+html.aj-mobile .hero-trust,
+html.aj-mobile .hero-trust-cards {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+  margin-top: 32px !important;
+}
+
+html.aj-mobile .hero-trust-cards span {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: auto !important;
+  padding: 24px !important;
+}
+
+/* Remove sobra exagerada depois dos cards da hero */
+html.aj-mobile .hero {
+  min-height: auto !important;
+  padding-bottom: 52px !important;
+}
+
+html.aj-mobile .hero-visual {
+  display: none !important;
+}
+
+/* Stats ocupando a tela toda */
+html.aj-mobile .stats-wrap {
+  padding: 32px 6vw 56px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+}
+
+/* Corrige seção "Muito além de um site bonito" */
+html.aj-mobile .agency-content {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 28px !important;
+}
+
+html.aj-mobile .agency-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+}
+
+html.aj-mobile .agency-card {
+  width: 100% !important;
+  min-height: auto !important;
+  padding: 26px !important;
+}
+
+/* Corrige cards de serviços/benefícios que estavam em 2 colunas */
+html.aj-mobile .service-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+}
+
+html.aj-mobile .service-card {
+  width: 100% !important;
+  padding: 26px !important;
+}
+
+/* Corrige seção app */
+html.aj-mobile .app-experience-content {
+  grid-template-columns: 1fr !important;
+  gap: 34px !important;
+}
+
+html.aj-mobile .app-experience-grid {
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+}
+
+html.aj-mobile .app-experience-card {
+  width: 100% !important;
+}
+
+/* Corrige portfólio na home */
+html.aj-mobile .premium-portfolio-layout,
+html.aj-mobile .side-projects-grid,
+html.aj-mobile .projects-grid,
+html.aj-mobile .portfolio-projects-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 22px !important;
+}
+
+html.aj-mobile .project-card {
+  width: 100% !important;
+}
+
+html.aj-mobile .project-preview {
+  height: 250px !important;
+}
+
+/* Evita qualquer card ficar dividido ou cortado */
+html.aj-mobile .stat-card,
+html.aj-mobile .agency-card,
+html.aj-mobile .service-card,
+html.aj-mobile .project-card,
+html.aj-mobile .app-experience-card {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Ajuste do botão WhatsApp para não cobrir conteúdo */
+html.aj-mobile .whatsapp-float {
+  right: 18px !important;
+  bottom: 86px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
