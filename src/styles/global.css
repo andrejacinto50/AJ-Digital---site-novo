@@ -4769,52 +4769,183 @@ body {
   }
 }
 
-/* HEADER MOBILE CONTROLADO PELO REACT */
+/* ========================================
+   AJ DIGITAL - MOBILE REAL CONTROLADO VIA REACT
+======================================== */
 
-.mobile-nav {
-  position: fixed;
-  top: 82px;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 7vw 30px;
-  background: rgba(5,5,5,.98);
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  backdrop-filter: blur(20px);
+html.aj-mobile,
+html.aj-mobile body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
-.mobile-nav a {
-  width: 100%;
-  padding: 15px 0;
-  color: var(--muted);
-  font-weight: 800;
+html.aj-mobile body {
+  padding-top: 82px !important;
 }
 
-.mobile-nav a.active {
-  color: var(--gold-2);
+/* Header */
+html.aj-mobile .site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 82px !important;
+  padding: 0 6vw !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  z-index: 999999 !important;
 }
 
-.mobile-nav .nav-cta {
-  width: 100%;
-  justify-content: center;
-  margin-top: 14px;
-  padding: 15px 20px;
+html.aj-mobile .brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  max-width: calc(100vw - 90px) !important;
 }
 
-@media (max-width: 1180px) {
-  .menu-btn {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    background: transparent;
-    border: 0;
-    color: var(--white);
-  }
+html.aj-mobile .brand-logo {
+  width: 44px !important;
+  height: 44px !important;
+  flex-shrink: 0 !important;
+}
 
-  .desktop-nav {
-    display: none !important;
-  }
+html.aj-mobile .brand strong {
+  font-size: 1.35rem !important;
+  white-space: nowrap !important;
+}
+
+html.aj-mobile .desktop-nav,
+html.aj-mobile .nav:not(.mobile-nav) {
+  display: none !important;
+}
+
+html.aj-mobile .menu-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--white) !important;
+  z-index: 1000000 !important;
+}
+
+/* Menu aberto */
+html.aj-mobile .mobile-nav,
+html.aj-mobile .nav.is-open {
+  position: fixed !important;
+  top: 82px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 22px 6vw 28px !important;
+  background: rgba(5,5,5,.98) !important;
+  border-bottom: 1px solid rgba(255,255,255,.1) !important;
+  z-index: 999998 !important;
+}
+
+html.aj-mobile .mobile-nav a,
+html.aj-mobile .nav.is-open a {
+  width: 100% !important;
+  padding: 15px 0 !important;
+}
+
+/* Layout geral */
+html.aj-mobile .section-padding {
+  padding: 82px 6vw !important;
+}
+
+html.aj-mobile .hero,
+html.aj-mobile .premium-portfolio-layout,
+html.aj-mobile .agency-content,
+html.aj-mobile .app-experience-content,
+html.aj-mobile .portfolio-position-content,
+html.aj-mobile .portfolio-app-content,
+html.aj-mobile .project-detail-hero,
+html.aj-mobile .project-overview-grid,
+html.aj-mobile .project-feature-layout,
+html.aj-mobile .project-mobile-content,
+html.aj-mobile .services-app-content,
+html.aj-mobile .services-ideal-content,
+html.aj-mobile .about-founder-grid,
+html.aj-mobile .about-tech-content {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+}
+
+/* Grids mobile */
+html.aj-mobile .side-projects-grid,
+html.aj-mobile .projects-grid,
+html.aj-mobile .service-grid,
+html.aj-mobile .stats-wrap,
+html.aj-mobile .portfolio-stats-wrap,
+html.aj-mobile .app-experience-grid,
+html.aj-mobile .about-values-grid,
+html.aj-mobile .about-process-grid,
+html.aj-mobile .services-premium-grid,
+html.aj-mobile .services-process-grid,
+html.aj-mobile .project-highlights-grid,
+html.aj-mobile .project-feature-list,
+html.aj-mobile .project-benefits-grid,
+html.aj-mobile .project-info-grid,
+html.aj-mobile .process-timeline,
+html.aj-mobile .process-mobile-content,
+html.aj-mobile .process-deliverables-grid,
+html.aj-mobile .contact-grid-premium,
+html.aj-mobile .contact-services-grid,
+html.aj-mobile .footer-grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* Elementos que estavam vazando */
+html.aj-mobile .hero-visual,
+html.aj-mobile .agency-mockup,
+html.aj-mobile .app-experience-visual,
+html.aj-mobile .portfolio-app-visual,
+html.aj-mobile .project-phone-visual {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+html.aj-mobile .mock-float-card,
+html.aj-mobile .app-floating-card,
+html.aj-mobile .portfolio-floating-app-card,
+html.aj-mobile .detail-floating-card,
+html.aj-mobile .services-app-badge,
+html.aj-mobile .about-floating-badge {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  margin-top: 14px !important;
+  animation: none !important;
+}
+
+/* Cards */
+html.aj-mobile .project-preview {
+  height: 250px !important;
+}
+
+html.aj-mobile .featured-project-wrap {
+  position: static !important;
+}
+
+html.aj-mobile .primary-btn,
+html.aj-mobile .secondary-btn {
+  width: 100% !important;
+}
+
+/* Títulos */
+html.aj-mobile h1 {
+  font-size: clamp(3rem, 14vw, 4.4rem) !important;
+}
+
+html.aj-mobile h2 {
+  font-size: clamp(2.1rem, 10vw, 3.4rem) !important;
 }
