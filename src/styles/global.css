@@ -216,12 +216,29 @@ textarea {
 .nav-cta {
   position: relative;
   overflow: hidden;
-  padding: 12px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
   border-radius: 999px;
+
   color: #050505 !important;
+  text-align: center;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-  box-shadow: 0 14px 40px rgba(212,175,55,.24);
+
+  background: linear-gradient(
+    135deg,
+    var(--gold),
+    var(--gold-2)
+  );
+
+  box-shadow:
+    0 14px 40px rgba(212,175,55,.24);
 }
 
 .nav-cta::after {
