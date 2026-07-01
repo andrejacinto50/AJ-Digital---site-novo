@@ -15,38 +15,38 @@ import CTA from '../components/CTA.jsx';
 const steps = [
   [
     '01',
-    'Entendimento',
-    'Entendemos sua empresa, público, diferenciais, concorrência e objetivos para construir algo alinhado ao negócio.'
+    'Diagnóstico',
+    'Entendemos sua empresa, rotina, desafios, público e objetivos para identificar oportunidades de melhoria.'
   ],
 
   [
     '02',
-    'Estrutura e Estratégia',
-    'Organizamos páginas, seções, conteúdos e chamadas para apresentar sua empresa de forma clara e profissional.'
+    'Planejamento',
+    'Definimos a melhor solução para o seu caso, seja um site, sistema, aplicativo ou automação.'
   ],
 
   [
     '03',
     'Desenvolvimento',
-    'Transformamos a estratégia em um projeto moderno utilizando tecnologias atuais, visual premium e experiência responsiva.'
+    'Criamos a solução utilizando tecnologias modernas, com foco em performance, experiência mobile e qualidade.'
   ],
 
   [
     '04',
-    'Publicação',
-    'Realizamos os ajustes finais, conectamos domínio, revisamos tudo e colocamos o projeto online.'
+    'Implantação',
+    'Realizamos os testes, configuramos tudo, colocamos a solução em funcionamento e acompanhamos os primeiros ajustes.'
   ]
 ];
 
 const deliverables = [
-  'Site publicado',
+  'Solução publicada',
   'WhatsApp integrado',
   'Layout responsivo',
   'Experiência mobile premium',
-  'Domínio configurado',
-  'Suporte inicial',
+  'Automações quando aplicável',
+  'Integrações necessárias',
   'Orientação de uso',
-  'Projeto preparado para crescimento'
+  'Estrutura preparada para evolução'
 ];
 
 export default function Process() {
@@ -60,12 +60,12 @@ export default function Process() {
           <span className="eyebrow">Nosso Processo</span>
 
           <h1>
-            Um processo profissional para transformar ideias em presença digital.
+            Um processo pensado para transformar necessidades em soluções digitais.
           </h1>
 
           <p>
-            Cada projeto segue uma metodologia clara para garantir organização,
-            qualidade e uma entrega alinhada aos objetivos da empresa.
+            Cada projeto segue uma metodologia que identifica oportunidades de melhoria,
+            define a melhor solução e entrega tecnologia alinhada aos objetivos da sua empresa.
           </p>
         </Reveal>
       </section>
@@ -75,12 +75,13 @@ export default function Process() {
           <Target size={30} />
 
           <h2>
-            Criar um site profissional vai muito além de escolher um layout.
+            Desenvolver uma solução digital vai muito além de criar um site.
           </h2>
 
           <p>
-            Cada etapa existe para garantir que o projeto represente sua empresa,
-            transmita mais confiança para o cliente e ajude a gerar oportunidades.
+            Antes de escrever qualquer linha de código, entendemos como sua empresa funciona,
+            identificamos oportunidades de melhoria e definimos a tecnologia mais adequada para
+            resolver o problema.
           </p>
         </Reveal>
       </section>
@@ -105,13 +106,12 @@ export default function Process() {
             <MonitorSmartphone size={30} />
 
             <h2>
-              Todos os projetos são desenvolvidos pensando primeiro no celular.
+              Tudo começa pensando na experiência do usuário.
             </h2>
 
             <p>
-              Hoje a maior parte dos acessos acontece pelo smartphone.
-              Por isso os projetos da AJ Digital são construídos com foco
-              em experiência mobile, navegação fluida e visual premium.
+              Sites, sistemas e aplicativos são desenvolvidos para oferecer rapidez,
+              facilidade de uso e excelente experiência em qualquer dispositivo.
             </p>
           </Reveal>
 
@@ -119,13 +119,12 @@ export default function Process() {
             <Smartphone size={30} />
 
             <h2>
-              Seu projeto pode evoluir junto com sua empresa.
+              Sua solução pode evoluir junto com sua empresa.
             </h2>
 
             <p>
-              Um site pode começar como institucional e futuramente evoluir
-              para catálogo, sistema web ou aplicativo Android e iOS,
-              conforme o crescimento do negócio.
+              Um projeto pode começar como um site institucional e evoluir para um
+              sistema interno, aplicativo, integração ou automação conforme o crescimento do negócio.
             </p>
           </Reveal>
         </div>
@@ -153,12 +152,13 @@ export default function Process() {
           <Rocket size={34} />
 
           <h2>
-            O objetivo não é apenas entregar um site.
+            O objetivo não é apenas entregar um projeto.
           </h2>
 
           <p>
-            O objetivo é ajudar sua empresa a transmitir mais confiança,
-            apresentar melhor seus serviços e facilitar o contato com novos clientes.
+            Nosso objetivo é desenvolver soluções digitais que ajudem sua empresa
+            a ganhar produtividade, transmitir mais profissionalismo, melhorar o atendimento
+            e crescer com tecnologia.
           </p>
 
           <a

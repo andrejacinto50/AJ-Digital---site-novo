@@ -24,14 +24,14 @@ export default function Footer() {
 
             <div>
               <h3>AJ Digital</h3>
-              <span>Presença Digital Premium</span>
+              <span>Soluções Digitais para Empresas</span>
             </div>
           </div>
 
           <p>
-            Desenvolvemos sites profissionais, catálogos digitais,
-            sistemas web e soluções com experiência de aplicativo para empresas
-            que desejam transmitir mais confiança e gerar oportunidades.
+            Desenvolvemos sites profissionais, sistemas, aplicativos e automações inteligentes
+            para empresas que desejam ganhar produtividade, fortalecer sua presença digital
+            e crescer com tecnologia.
           </p>
 
           <a
@@ -40,7 +40,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Solicitar orçamento
+            Falar com um especialista
             <ArrowUpRight size={16} />
           </a>
         </div>
@@ -60,11 +60,11 @@ export default function Footer() {
           <h4>Soluções</h4>
 
           <span>Sites Profissionais</span>
-          <span>Lojas WhatsApp</span>
-          <span>E-commerce</span>
-          <span>Sistemas Web</span>
-          <span>Experiência Mobile</span>
+          <span>Automação de Processos</span>
+          <span>Sistemas Sob Medida</span>
           <span>Aplicativos Android e iOS</span>
+          <span>Integrações</span>
+          <span>Inteligência Artificial</span>
         </div>
 
         <div>
@@ -79,24 +79,23 @@ export default function Footer() {
             WhatsApp
           </a>
 
-        <a
-  href="https://instagram.com/aj__digital"
-  target="_blank"
-  rel="noreferrer"
->
-    <AtSign size={16} />
+          <a
+            href="https://instagram.com/aj__digital"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AtSign size={16} />
+            Instagram
+          </a>
 
-  Instagram
-</a>
-
-<a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=andrejacinto80@gmail.com&su=Solicitação%20de%20Orçamento%20-%20AJ%20Digital&body=Olá%20André,%20vim%20pelo%20site%20da%20AJ%20Digital%20e%20gostaria%20de%20mais%20informações%20sobre%20um%20projeto."
-  target="_blank"
-  rel="noreferrer"
->
-  <Mail size={16} />
-  andrejacinto80@gmail.com
-</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=andrejacinto80@gmail.com&su=Solicitação%20de%20Orçamento%20-%20AJ%20Digital&body=Olá%20André,%20vim%20pelo%20site%20da%20AJ%20Digital%20e%20gostaria%20de%20mais%20informações%20sobre%20um%20projeto."
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Mail size={16} />
+            andrejacinto80@gmail.com
+          </a>
 
           <a
             href="https://ajdigital.dev.br"
@@ -109,11 +108,11 @@ export default function Footer() {
         </div>
       </div>
 
-     <div className="footer-bottom">
-  <span>
-    © 2026 AJ Digital. Todos os direitos reservados.
-  </span>
-</div>
+      <div className="footer-bottom">
+        <span>
+          © 2026 AJ Digital. Transformando empresas através da tecnologia.
+        </span>
+      </div>
     </footer>
   );
 }

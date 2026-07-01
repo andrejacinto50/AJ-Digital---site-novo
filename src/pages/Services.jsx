@@ -25,24 +25,24 @@ const mainServices = [
     'Sites modernos, rápidos e responsivos para empresas que querem transmitir mais confiança e valorizar sua marca.'
   ],
   [
-    ShoppingBag,
-    'Catálogo ou loja com WhatsApp',
-    'Estrutura para apresentar produtos, categorias, ofertas e direcionar o cliente para comprar pelo WhatsApp.'
+    Zap,
+    'Automação de processos',
+    'Automatizamos tarefas repetitivas para sua empresa economizar tempo, organizar demandas e trabalhar com mais eficiência.'
   ],
   [
-    Target,
-    'Landing pages de conversão',
-    'Páginas estratégicas para campanhas, lançamentos, serviços específicos e captação de contatos.'
+    MessageCircle,
+    'WhatsApp e atendimento',
+    'Soluções para facilitar contatos, respostas, orçamentos, direcionamentos e atendimento ao cliente pelo WhatsApp.'
   ],
   [
     Code2,
-    'Projetos personalizados',
-    'Soluções sob medida para negócios que precisam de uma estrutura diferente dos modelos tradicionais.'
+    'Sistemas sob medida',
+    'Projetos personalizados para empresas que precisam organizar processos internos ou criar uma solução própria.'
   ],
   [
     Smartphone,
     'Experiência mobile premium',
-    'Sites pensados para funcionar no celular com aparência moderna, navegação fluida e sensação de aplicativo.'
+    'Sites e sistemas pensados para funcionar no celular com aparência moderna, navegação fluida e sensação de aplicativo.'
   ],
   [
     Rocket,
@@ -52,19 +52,19 @@ const mainServices = [
 ];
 
 const serviceSteps = [
-  ['01', 'Entendimento', 'Analisamos seu negócio, seu público, seus serviços e o objetivo principal do projeto.'],
-  ['02', 'Estratégia', 'Organizamos a estrutura ideal para apresentar sua empresa com clareza e gerar mais confiança.'],
-  ['03', 'Desenvolvimento', 'Criamos o site com visual premium, tecnologia moderna, responsividade e foco em conversão.'],
-  ['04', 'Entrega', 'Publicamos o projeto e deixamos sua empresa pronta para receber contatos pelo digital.']
+  ['01', 'Entendimento', 'Analisamos seu negócio, sua rotina, seus processos e o objetivo principal do projeto.'],
+  ['02', 'Estratégia', 'Identificamos o que pode ser criado, melhorado ou automatizado para gerar mais resultado.'],
+  ['03', 'Desenvolvimento', 'Criamos o site, sistema, aplicativo ou automação com tecnologia moderna e foco em eficiência.'],
+  ['04', 'Implantação', 'Publicamos, configuramos e deixamos a solução pronta para ajudar sua empresa no dia a dia.']
 ];
 
 const idealFor = [
   'Empresas que ainda não têm site profissional',
   'Negócios que dependem apenas do Instagram',
-  'Lojas que querem vender pelo WhatsApp',
+  'Empresas que perdem tempo com tarefas repetitivas',
   'Prestadores de serviço que precisam transmitir mais confiança',
   'Marcas que querem melhorar sua apresentação digital',
-  'Empresas que querem evoluir para uma experiência de aplicativo'
+  'Empresas que querem automatizar atendimento, processos ou rotinas internas'
 ];
 
 export default function Services() {
@@ -78,12 +78,12 @@ export default function Services() {
           <span className="eyebrow">Serviços AJ Digital</span>
 
           <h1>
-            Soluções digitais para empresas que querem se destacar, gerar confiança e vender melhor.
+            Soluções digitais para empresas que querem vender melhor, economizar tempo e crescer com tecnologia.
           </h1>
 
           <p>
-            Da página institucional ao catálogo com venda pelo WhatsApp, cada projeto é pensado para
-            fortalecer sua marca, melhorar sua presença digital e facilitar o contato com novos clientes.
+            De sites profissionais a automações inteligentes, cada projeto é pensado para fortalecer
+            sua presença digital, melhorar o atendimento e tornar sua empresa mais produtiva.
           </p>
 
           <div className="services-hero-actions">
@@ -97,7 +97,7 @@ export default function Services() {
             </a>
 
             <a className="secondary-btn" href="/portfolio">
-              Ver modelos criados
+              Ver projetos criados
             </a>
           </div>
         </Reveal>
@@ -106,8 +106,8 @@ export default function Services() {
       <section className="section-padding services-main-section">
         <SectionTitle
           eyebrow="O que fazemos"
-          title="Serviços criados para fortalecer sua presença digital"
-          text="A AJ Digital desenvolve projetos modernos, responsivos e estratégicos para empresas que querem sair do improviso e se apresentar melhor na internet."
+          title="Serviços criados para fortalecer sua empresa"
+          text="A AJ Digital desenvolve sites, sistemas, aplicativos e automações para empresas que querem sair do improviso e trabalhar de forma mais profissional."
         />
 
         <div className="services-premium-grid">
@@ -127,38 +127,37 @@ export default function Services() {
       <section className="section-padding services-app-section">
         <div className="services-app-content">
           <Reveal className="services-app-copy">
-            <span className="eyebrow">Nova possibilidade</span>
+            <span className="eyebrow">Sites, apps e automações</span>
 
             <h2>
-              Seu site pode ter experiência de aplicativo. E também pode virar um app de verdade.
+              Sua empresa pode ter site, aplicativo e automações trabalhando juntos.
             </h2>
 
             <p>
-              Hoje os sites criados pela AJ Digital já são pensados para o celular, com navegação
+              Hoje os projetos criados pela AJ Digital já são pensados para o celular, com navegação
               fluida, visual moderno e experiência parecida com aplicativo.
             </p>
 
             <p>
-              Para empresas que desejam uma solução mais avançada, também existe a possibilidade de
-              transformar o projeto em aplicativo para Android e iOS. Esse tipo de projeto possui um
-              investimento maior e é indicado para marcas que querem uma presença digital ainda mais forte.
+              Além disso, também é possível criar automações, sistemas internos, integrações com
+              WhatsApp e até aplicativos Android e iOS, dependendo da necessidade e do momento da empresa.
             </p>
 
             <a
               className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20a%20diferença%20entre%20site,%20site%20com%20experiência%20de%20app%20e%20aplicativo%20Android/iOS."
+              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20site,%20app%20e%20automação%20podem%20ajudar%20minha%20empresa."
               target="_blank"
               rel="noreferrer"
             >
-              Entender site ou aplicativo <ArrowRight size={18} />
+              Entender as possibilidades <ArrowRight size={18} />
             </a>
           </Reveal>
 
           <Reveal className="services-app-visual" delay={0.15}>
             <div className="services-phone">
               <div className="services-phone-screen">
-                <span>Mobile First</span>
-                <h3>Experiência premium no celular</h3>
+                <span>Mobile + Automação</span>
+                <h3>Soluções digitais para empresas</h3>
                 <div></div>
                 <div></div>
                 <button>WhatsApp</button>
@@ -166,13 +165,13 @@ export default function Services() {
             </div>
 
             <div className="services-app-badge app-badge-one">
-              <strong>Android</strong>
+              <strong>Apps</strong>
               <small>Possibilidade avançada</small>
             </div>
 
             <div className="services-app-badge app-badge-two">
-              <strong>iOS</strong>
-              <small>Projeto sob medida</small>
+              <strong>IA</strong>
+              <small>Automação inteligente</small>
             </div>
           </Reveal>
         </div>
@@ -182,7 +181,7 @@ export default function Services() {
         <SectionTitle
           eyebrow="Soluções disponíveis"
           title="O que a AJ Digital pode criar para sua empresa"
-          text="Cada serviço pode ser adaptado conforme o segmento, objetivo e momento do seu negócio."
+          text="Cada serviço pode ser adaptado conforme o segmento, objetivo, rotina e necessidade do seu negócio."
         />
 
         <div className="service-grid">
@@ -199,7 +198,7 @@ export default function Services() {
       <section className="section-padding services-process-section">
         <Reveal className="services-section-heading">
           <span className="eyebrow">Como funciona</span>
-          <h2>Um processo simples, profissional e pensado para resultado.</h2>
+          <h2>Um processo simples, profissional e pensado para transformar necessidades em soluções.</h2>
         </Reveal>
 
         <div className="services-process-grid">
@@ -219,12 +218,13 @@ export default function Services() {
             <span className="eyebrow">Para quem é</span>
 
             <h2>
-              Ideal para empresas que querem parar de depender só das redes sociais.
+              Ideal para empresas que querem parar de depender só das redes sociais e do trabalho manual.
             </h2>
 
             <p>
-              O Instagram ajuda o cliente a conhecer sua marca, mas o site organiza sua apresentação,
-              transmite mais confiança e facilita a decisão de entrar em contato.
+              O Instagram ajuda o cliente a conhecer sua marca, mas uma solução digital bem construída
+              organiza sua apresentação, facilita o atendimento, reduz tarefas repetitivas e melhora a
+              experiência do cliente.
             </p>
           </Reveal>
 

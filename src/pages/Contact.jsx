@@ -22,13 +22,12 @@ export default function Contact() {
           <span className="eyebrow">Contato AJ Digital</span>
 
           <h1>
-            Vamos transformar a presença digital da sua empresa?
+            Vamos criar uma solução digital para sua empresa?
           </h1>
 
           <p>
-            Seja para um site profissional, catálogo digital,
-            sistema web ou aplicativo, podemos conversar sobre a melhor
-            solução para o seu negócio.
+            Seja para um site profissional, sistema, aplicativo ou automação,
+            podemos conversar sobre a melhor solução para o momento do seu negócio.
           </p>
 
           <a
@@ -48,17 +47,17 @@ export default function Contact() {
           <Rocket size={34} />
 
           <h2>
-            Cada empresa possui necessidades diferentes.
+            Cada empresa possui desafios e necessidades diferentes.
           </h2>
 
           <p>
-            Por isso a AJ Digital desenvolve projetos personalizados,
-            alinhados com o segmento, objetivos e realidade de cada negócio.
+            Por isso a AJ Digital desenvolve soluções personalizadas,
+            alinhadas com o segmento, os objetivos e a rotina de cada negócio.
           </p>
 
           <p>
-            Hoje desenvolvemos sites profissionais, lojas online,
-            sistemas web e também soluções com experiência de aplicativo.
+            Hoje desenvolvemos sites profissionais, sistemas sob medida,
+            aplicativos, integrações com WhatsApp e automações inteligentes.
           </p>
         </Reveal>
       </section>
@@ -120,7 +119,7 @@ export default function Contact() {
           <span className="eyebrow">O que podemos desenvolver</span>
 
           <h2>
-            Soluções digitais para empresas que querem crescer.
+            Sites, sistemas, aplicativos e automações para empresas.
           </h2>
         </Reveal>
 
@@ -132,7 +131,7 @@ export default function Contact() {
 
           <Reveal className="contact-service-item">
             <Smartphone size={28} />
-            <span>Experiência mobile premium</span>
+            <span>Sistemas sob medida</span>
           </Reveal>
 
           <Reveal className="contact-service-item">
@@ -142,7 +141,7 @@ export default function Contact() {
 
           <Reveal className="contact-service-item">
             <MessageCircle size={28} />
-            <span>Integração com WhatsApp</span>
+            <span>Automações e WhatsApp</span>
           </Reveal>
         </div>
       </section>
@@ -150,12 +149,12 @@ export default function Contact() {
       <section className="section-padding contact-final-section">
         <Reveal className="contact-final-card">
           <h2>
-            Seu próximo cliente pode estar procurando sua empresa agora.
+            Sua empresa pode ganhar tempo, confiança e mais oportunidades com tecnologia.
           </h2>
 
           <p>
-            Vamos criar uma presença digital que transmita mais confiança,
-            valorize sua marca e facilite o contato com novos clientes.
+            Vamos criar uma solução digital para melhorar sua presença,
+            automatizar processos e facilitar o contato com novos clientes.
           </p>
 
           <a

@@ -19,7 +19,7 @@ const portfolioStats = [
   ['+6', 'projetos premium'],
   ['100%', 'mobile first'],
   ['React', 'alta performance'],
-  ['WhatsApp', 'conversão direta']
+  ['IA', 'automações inteligentes']
 ];
 
 const portfolioHighlights = [
@@ -30,13 +30,13 @@ const portfolioHighlights = [
   ],
   [
     Code2,
-    'Desenvolvimento em React',
-    'Estrutura moderna, fluida e preparada para entregar uma navegação mais profissional.'
+    'Tecnologia moderna',
+    'Estrutura em React preparada para sites, sistemas, integrações e automações.'
   ],
   [
     MessageCircle,
-    'Foco em contato pelo WhatsApp',
-    'Chamadas estratégicas para facilitar o próximo passo do cliente.'
+    'WhatsApp e atendimento',
+    'Chamadas estratégicas para facilitar contato, orçamentos e atendimento ao cliente.'
   ]
 ];
 
@@ -51,18 +51,19 @@ export default function Portfolio() {
           <span className="eyebrow">Portfólio AJ Digital</span>
 
           <h1>
-            Projetos desenvolvidos para transmitir confiança, valorizar marcas e gerar oportunidades.
+            Projetos digitais criados para gerar confiança, produtividade e novas oportunidades.
           </h1>
 
           <p>
             Modelos premium para diferentes segmentos, criados com visual profissional,
-            experiência mobile, tecnologia moderna e foco em conversão pelo WhatsApp.
+            experiência mobile, tecnologia moderna e possibilidade de evoluir para sistemas,
+            aplicativos e automações.
           </p>
 
           <div className="portfolio-hero-actions">
             <a
               className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20vi%20os%20projetos%20do%20portfólio%20da%20AJ%20Digital%20e%20quero%20um%20site%20profissional%20para%20minha%20empresa."
+              href="https://wa.me/5548991087702?text=Olá,%20vi%20os%20projetos%20do%20portfólio%20da%20AJ%20Digital%20e%20quero%20uma%20solução%20digital%20para%20minha%20empresa."
               target="_blank"
               rel="noreferrer"
             >
@@ -91,7 +92,7 @@ export default function Portfolio() {
             <span className="eyebrow">Muito além de páginas bonitas</span>
 
             <h2>
-              Criamos experiências digitais para empresas que querem parecer mais profissionais.
+              Criamos experiências digitais para empresas que querem parecer mais profissionais e trabalhar melhor.
             </h2>
 
             <p>
@@ -100,8 +101,8 @@ export default function Portfolio() {
             </p>
 
             <p>
-              A AJ Digital une design premium, tecnologia moderna, estrutura estratégica e navegação
-              mobile para entregar sites com aparência profissional e experiência fluida.
+              A AJ Digital une design premium, tecnologia moderna, estrutura estratégica, navegação
+              mobile e possibilidade de automação para entregar soluções digitais mais completas.
             </p>
           </Reveal>
 
@@ -121,7 +122,7 @@ export default function Portfolio() {
         <SectionTitle
           eyebrow="Modelos em destaque"
           title="Projetos criados para diferentes segmentos"
-          text="Use esses modelos como referência para imaginar o nível que sua empresa pode ter na internet."
+          text="Use esses modelos como referência para imaginar o nível de presença digital, experiência e automação que sua empresa pode ter."
         />
 
         <div className="projects-grid portfolio-projects-grid">
@@ -136,10 +137,10 @@ export default function Portfolio() {
       <section className="section-padding portfolio-app-section">
         <div className="portfolio-app-content">
           <Reveal className="portfolio-app-copy">
-            <span className="eyebrow">Nova possibilidade</span>
+            <span className="eyebrow">Sites, apps e automações</span>
 
             <h2>
-              Sites com experiência de aplicativo. E com possibilidade de virar app Android e iOS.
+              Seu projeto pode começar como site e evoluir para aplicativo, sistema ou automação.
             </h2>
 
             <p>
@@ -148,15 +149,14 @@ export default function Portfolio() {
             </p>
 
             <p>
-              Para empresas que querem uma solução mais avançada, também é possível transformar o
-              projeto em aplicativo para Android e iOS. Esse tipo de desenvolvimento possui um
-              investimento maior e é indicado para negócios que desejam uma presença digital ainda
-              mais forte.
+              Para empresas que querem uma solução mais avançada, também é possível evoluir o projeto
+              para aplicativo Android e iOS, sistemas internos, integrações com WhatsApp e automações
+              inteligentes para melhorar a rotina do negócio.
             </p>
 
             <a
               className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20a%20possibilidade%20de%20ter%20um%20site%20com%20experiência%20de%20aplicativo%20ou%20um%20app%20Android%20e%20iOS."
+              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20um%20site,%20app,%20sistema%20ou%20automação%20pode%20ajudar%20minha%20empresa."
               target="_blank"
               rel="noreferrer"
             >
@@ -191,7 +191,7 @@ export default function Portfolio() {
             <div className="portfolio-floating-app-card card-two">
               <Zap size={18} />
               <div>
-                <strong>App Android/iOS</strong>
+                <strong>Automação/IA</strong>
                 <small>Projeto avançado</small>
               </div>
             </div>

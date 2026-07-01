@@ -23,7 +23,7 @@ const stats = [
   ['+6', 'projetos premium'],
   ['100%', 'mobile first'],
   ['React', 'alta performance'],
-  ['WhatsApp', 'conversão direta']
+  ['IA', 'automações inteligentes']
 ];
 
 const projectOrder = [
@@ -45,8 +45,8 @@ const otherProjects = orderedProjects.slice(1);
 const benefits = [
   [
     BadgeCheck,
-    'Mais credibilidade',
-    'Sua empresa passa uma imagem mais profissional antes mesmo do primeiro atendimento.'
+    'Mais profissionalismo',
+    'Sua empresa transmite mais confiança com uma presença digital moderna, organizada e estratégica.'
   ],
   [
     Smartphone,
@@ -56,12 +56,12 @@ const benefits = [
   [
     Code2,
     'Tecnologia moderna',
-    'Sites desenvolvidos com React, estrutura leve, visual rápido e experiência mais fluida.'
+    'Sites, sistemas e automações desenvolvidos com estrutura leve, moderna e preparada para evoluir.'
   ],
   [
     Zap,
-    'Mais oportunidades',
-    'Botões, chamadas e seções estratégicas para transformar visitantes em conversas no WhatsApp.'
+    'Mais produtividade',
+    'Automatizamos tarefas repetitivas para sua empresa ganhar tempo e melhorar o atendimento.'
   ]
 ];
 
@@ -69,22 +69,22 @@ const agencyHighlights = [
   [
     MonitorSmartphone,
     'Visual premium em todos os dispositivos',
-    'Seu site precisa impressionar no computador, mas principalmente no celular.'
+    'Seu projeto precisa impressionar no computador, mas principalmente no celular.'
   ],
   [
     Target,
     'Estrutura focada em resultado',
-    'Não criamos apenas páginas bonitas. Criamos uma apresentação digital pensada para gerar contato.'
+    'Não criamos apenas páginas bonitas. Criamos soluções pensadas para gerar contato e facilitar processos.'
   ],
   [
     MessageCircle,
-    'WhatsApp integrado',
-    'O cliente vê seus serviços, entende sua empresa e consegue chamar você com poucos cliques.'
+    'WhatsApp e atendimento integrado',
+    'O cliente entende sua empresa, chama no WhatsApp e pode ser atendido de forma mais rápida e organizada.'
   ],
   [
     LayoutDashboard,
-    'Projetos organizados por segmento',
-    'Academias, barbearias, lojas, restaurantes e projetos personalizados para diferentes negócios.'
+    'Projetos sob medida',
+    'Sites, sistemas, aplicativos e automações personalizadas para diferentes tipos de negócios.'
   ]
 ];
 
@@ -115,15 +115,15 @@ export default function Home() {
         <div className="hero-orb hero-orb-two"></div>
 
         <Reveal className="hero-copy">
-          <span className="eyebrow">AJ Digital • Agência Web Premium</span>
+          <span className="eyebrow">AJ Digital • Sites, Apps e Automações</span>
 
           <h1>
-            Seu negócio precisa causar uma primeira impressão forte.
+            Automatizamos processos e criamos soluções digitais para empresas.
           </h1>
 
           <p>
-            Criamos sites profissionais para empresas que querem transmitir mais confiança,
-            valorizar sua marca e transformar visitantes em oportunidades reais pelo WhatsApp.
+            Desenvolvemos sites profissionais, aplicativos e automações inteligentes para empresas
+            que querem ganhar tempo, melhorar o atendimento e transformar tecnologia em resultado.
           </p>
 
           <div className="hero-actions">
@@ -133,28 +133,28 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Quero um site profissional <ArrowRight size={18} />
+              Quero automatizar minha empresa <ArrowRight size={18} />
             </a>
 
             <a className="secondary-btn" href="/portfolio">
-              Ver modelos criados
+              Ver projetos criados
             </a>
           </div>
 
           <div className="hero-trust hero-trust-cards">
             <span>
-              <strong>Visual premium</strong>
-              <small>Design moderno para valorizar sua marca</small>
+              <strong>Sites profissionais</strong>
+              <small>Presença digital moderna para valorizar sua marca</small>
             </span>
 
             <span>
-              <strong>Mais confiança</strong>
-              <small>Presença digital profissional para o cliente decidir</small>
+              <strong>Automações inteligentes</strong>
+              <small>Processos mais rápidos, organizados e eficientes</small>
             </span>
 
             <span>
-              <strong>Contato facilitado</strong>
-              <small>Estrutura pensada para gerar conversas no WhatsApp</small>
+              <strong>Atendimento facilitado</strong>
+              <small>Estrutura pensada para gerar contatos e economizar tempo</small>
             </span>
           </div>
         </Reveal>
@@ -170,10 +170,10 @@ export default function Home() {
             <div className="agency-mockup-content">
               <div className="mock-glass-block"></div>
 
-              <span className="mock-label">Projeto Premium</span>
+              <span className="mock-label">Solução Digital</span>
 
               <h3>
-                Site profissional focado em presença e conversão.
+                Sites, apps e automações para empresas que querem evoluir.
               </h3>
 
               <div className="mock-progress">
@@ -192,8 +192,8 @@ export default function Home() {
             </div>
 
             <div className="mock-float-card value-card">
-              <strong>+ Valor</strong>
-              <span>Percepção profissional</span>
+              <strong>+ Tempo</strong>
+              <span>Processos automatizados</span>
             </div>
 
             <div className="mock-float-card mobile-card">
@@ -209,7 +209,7 @@ export default function Home() {
             <div className="mock-float-card result-card">
               <TrendingUp size={18} />
               <div>
-                <strong>Conversão</strong>
+                <strong>Resultado</strong>
                 <span>Estrutura estratégica</span>
               </div>
             </div>
@@ -229,31 +229,31 @@ export default function Home() {
       <section className="section-padding app-experience-section">
         <div className="app-experience-content">
           <Reveal className="app-experience-copy">
-            <span className="eyebrow">Nova possibilidade AJ Digital</span>
+            <span className="eyebrow">Nova fase AJ Digital</span>
 
             <h2>
-              Sites que parecem aplicativos no celular. E que também podem virar um app de verdade.
+              Sua empresa pode ter site, aplicativo e automações trabalhando juntos.
             </h2>
 
             <p>
-              Hoje a AJ Digital desenvolve sites profissionais com foco total na experiência mobile.
-              Na prática, o cliente acessa pelo celular e sente uma navegação rápida, moderna e muito
-              parecida com um aplicativo.
+              Hoje a AJ Digital desenvolve soluções digitais que vão além de um site bonito.
+              Criamos estruturas para melhorar a presença online, facilitar o atendimento e
+              automatizar tarefas que tomam tempo no dia a dia da empresa.
             </p>
 
             <p>
-              Para empresas que querem dar um passo maior no digital, também é possível transformar
-              o projeto em um aplicativo para Android e iOS. Essa é uma solução mais avançada, com
-              investimento maior, indicada para negócios que querem uma presença ainda mais forte.
+              Dependendo da necessidade do negócio, o projeto pode envolver site profissional,
+              experiência mobile parecida com aplicativo, aplicativo Android e iOS, integração
+              com WhatsApp, formulários, sistemas internos e automações inteligentes.
             </p>
 
             <a
               className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20a%20possibilidade%20de%20ter%20um%20site%20com%20experiência%20de%20aplicativo%20ou%20transformar%20meu%20site%20em%20app."
+              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20a%20AJ%20Digital%20pode%20automatizar%20processos%20da%20minha%20empresa."
               target="_blank"
               rel="noreferrer"
             >
-              Quero entender essa possibilidade <ArrowRight size={18} />
+              Quero entender as automações <ArrowRight size={18} />
             </a>
           </Reveal>
 
@@ -262,8 +262,8 @@ export default function Home() {
               <div className="app-phone-top"></div>
 
               <div className="app-phone-screen">
-                <span className="app-screen-badge">Mobile First</span>
-                <h3>Experiência premium no celular</h3>
+                <span className="app-screen-badge">Automação + Mobile</span>
+                <h3>Soluções digitais para empresas</h3>
 
                 <div className="app-screen-card"></div>
                 <div className="app-screen-card small"></div>
@@ -272,18 +272,18 @@ export default function Home() {
             </div>
 
             <div className="app-floating-card app-card-one">
-              <strong>Android</strong>
-              <span>Possibilidade de publicação</span>
+              <strong>Sites</strong>
+              <span>Presença profissional</span>
             </div>
 
             <div className="app-floating-card app-card-two">
-              <strong>iOS</strong>
+              <strong>Apps</strong>
               <span>Projeto mais avançado</span>
             </div>
 
             <div className="app-floating-card app-card-three">
-              <strong>Site + App</strong>
-              <span>Presença digital completa</span>
+              <strong>Automação</strong>
+              <span>Mais produtividade</span>
             </div>
           </Reveal>
         </div>
@@ -334,22 +334,22 @@ export default function Home() {
             <span className="eyebrow">Muito além de um site bonito</span>
 
             <h2>
-              Seu cliente pode conhecer sua empresa pelas redes sociais, mas é no site que ele decide se confia em você.
+              Sua empresa precisa de tecnologia para atrair clientes, economizar tempo e organizar processos.
             </h2>
 
             <p>
-              Um site profissional organiza sua apresentação, valoriza seus serviços e transmite a segurança
-              que o cliente precisa para entrar em contato. A AJ Digital cria essa estrutura com visual premium,
-              navegação simples e foco em conversão.
+              Um site profissional melhora a percepção da sua marca. Mas quando ele é combinado com
+              automações, WhatsApp, sistemas e integrações, sua empresa passa a trabalhar de forma mais
+              rápida, moderna e eficiente.
             </p>
 
             <a
               className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20um%20site%20profissional%20pode%20ajudar%20minha%20empresa."
+              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20soluções%20digitais%20e%20automações%20podem%20ajudar%20minha%20empresa."
               target="_blank"
               rel="noreferrer"
             >
-              Quero melhorar minha presença digital <ArrowRight size={18} />
+              Quero melhorar minha empresa <ArrowRight size={18} />
             </a>
           </Reveal>
 
@@ -368,8 +368,8 @@ export default function Home() {
       <section className="section-padding why-section">
         <SectionTitle
           eyebrow="Por que investir"
-          title="Um site profissional muda a percepção sobre sua empresa"
-          text="A primeira impressão do cliente pode definir se ele chama você ou procura o concorrente."
+          title="Automação e presença digital mudam a forma como sua empresa trabalha"
+          text="Além de atrair mais confiança, a tecnologia pode reduzir tarefas manuais, agilizar atendimentos e melhorar a experiência do cliente."
         />
 
         <div className="service-grid">
@@ -386,8 +386,8 @@ export default function Home() {
       <section className="section-padding">
         <SectionTitle
           eyebrow="Serviços"
-          title="Soluções digitais para negócios locais"
-          text="Da página institucional ao projeto personalizado, criamos estruturas digitais para empresas que querem se apresentar melhor."
+          title="Soluções digitais para empresas que querem crescer"
+          text="Criamos sites, aplicativos, sistemas e automações personalizadas para negócios que querem mais presença, produtividade e resultado."
         />
 
         <div className="service-grid">
