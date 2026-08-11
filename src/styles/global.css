@@ -5087,3 +5087,152 @@ html.aj-mobile .whatsapp-float {
   width: 56px !important;
   height: 56px !important;
 }
+
+/* =====================================================
+   CORREÇÃO DEFINITIVA HERO MOBILE - AJ DIGITAL
+   COLOCAR NO FINAL DO CSS
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* Impede qualquer elemento do hero de escapar da tela */
+  .hero,
+  .hero-premium,
+  .hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-premium {
+    overflow: hidden !important;
+
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 105px !important;
+  }
+
+  /* FORÇA O TÍTULO A RESPEITAR A LARGURA */
+  .hero-premium .hero-copy h1 {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
+
+    font-size: 2.55rem !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.055em !important;
+
+    white-space: normal !important;
+
+    overflow: visible !important;
+
+    overflow-wrap: anywhere !important;
+    word-wrap: break-word !important;
+    word-break: normal !important;
+
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Texto abaixo */
+  .hero-premium .hero-copy > p {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* Eyebrow */
+  .hero-premium .eyebrow {
+    max-width: 100% !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  /* Botões */
+  .hero-premium .hero-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 8px !important;
+  }
+
+  .hero-premium .hero-actions a {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box !important;
+    justify-content: center !important;
+  }
+
+  /* Cards inferiores */
+  .hero-premium .hero-trust {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+/* ==============================================
+   IPHONES / CELULARES MAIS ESTREITOS
+   ============================================== */
+
+@media screen and (max-width: 480px) {
+
+  .hero-premium .hero-copy h1 {
+    font-size: 2.35rem !important;
+  }
+
+}
+
+
+/* ==============================================
+   CELULARES 390px OU MENORES
+   ============================================== */
+
+@media screen and (max-width: 400px) {
+
+  .hero-premium {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero-premium .hero-copy h1 {
+    font-size: 2.15rem !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+}
+
+
+/* ==============================================
+   CELULARES MUITO PEQUENOS
+   ============================================== */
+
+@media screen and (max-width: 360px) {
+
+  .hero-premium {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-premium .hero-copy h1 {
+    font-size: 2rem !important;
+  }
+
+}
