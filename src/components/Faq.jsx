@@ -1,0 +1,103 @@
+import { useEffect } from 'react';
+import { ChevronDown } from 'lucide-react';
+
+/**
+ * Perguntas que travam a decisão de contratar. Ficam em um lugar só para
+ * poderem ser reaproveitadas em outras páginas (serviços, landing pages).
+ */
+export const faqItems = [
+  {
+    question: 'Quanto custa um projeto?',
+    answer:
+      'Cada projeto é diferente do outro e tem sua personalização, então o valor depende do que ' +
+      'vai ser desenvolvido e do que o projeto vai ter. O orçamento sai depois de entender a sua ' +
+      'necessidade — a conversa não tem custo nenhum.'
+  },
+  {
+    question: 'Em quanto tempo o projeto fica pronto?',
+    answer:
+      'Normalmente entre 7 e 15 dias, conforme o tamanho do projeto e a rapidez com que as ' +
+      'informações e materiais da empresa são enviados.'
+  },
+  {
+    question: 'Tem garantia depois da entrega?',
+    answer:
+      'Sim. Cada projeto conta com 12 meses de garantia para correções relacionadas ao ' +
+      'desenvolvimento e 3 meses do Programa de Acompanhamento AJ Digital.'
+  },
+  {
+    question: 'Preciso pagar mensalidade de hospedagem?',
+    answer:
+      'Não enquanto a infraestrutura utilizada permitir manter o projeto sem esse custo. Se o ' +
+      'crescimento do site, sistema ou aplicação exigir um plano pago ou outro serviço externo, ' +
+      'você é informado sobre o custo antes de qualquer contratação.'
+  },
+  {
+    question: 'E o domínio, o endereço do site?',
+    answer:
+      'O domínio personalizado tem custo de renovação anual. Em alguns projetos e condições ' +
+      'comerciais, o primeiro ano pode ser incluído como benefício; depois desse período a ' +
+      'renovação fica sob responsabilidade do cliente.'
+  },
+  {
+    question: 'Quem publica e configura tudo?',
+    answer:
+      'A AJ Digital faz toda a parte técnica: configuração da hospedagem, domínio, DNS, ' +
+      'certificado SSL e publicação do projeto. Você recebe a solução no ar e funcionando.'
+  },
+  {
+    question: 'Preciso entender de tecnologia?',
+    answer:
+      'Não. Você conta qual é o problema ou o que quer melhorar, e a parte técnica é comigo — do ' +
+      'primeiro contato até a publicação. Você fala direto com quem desenvolve.'
+  },
+  {
+    question: 'E se eu quiser mudar algo depois?',
+    answer:
+      'Durante o Programa de Acompanhamento é só chamar. Depois desse período, alterações, ' +
+      'melhorias e novas funcionalidades podem ser contratadas sob demanda. A AJ Digital também ' +
+      'pretende disponibilizar planos de manutenção e evolução contínua para quem quiser ' +
+      'acompanhamento recorrente.'
+  }
+];
+
+/**
+ * FAQ em <details> nativo: abre e fecha sem JavaScript e funciona com leitor
+ * de tela. Enquanto está montado, publica o schema FAQPage — o Google pode
+ * mostrar as perguntas direto no resultado de busca.
+ */
+export default function Faq({ items = faqItems }) {
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: items.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer }
+      }))
+    });
+
+    document.head.appendChild(script);
+
+    return () => script.remove();
+  }, [items]);
+
+  return (
+    <div className="faq-list">
+      {items.map(({ question, answer }) => (
+        <details className="faq-item" key={question}>
+          <summary>
+            {question}
+            <ChevronDown size={20} />
+          </summary>
+
+          <p>{answer}</p>
+        </details>
+      ))}
+    </div>
+  );
+}

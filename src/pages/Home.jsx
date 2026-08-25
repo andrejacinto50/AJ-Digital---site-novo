@@ -1,13 +1,17 @@
+import { Link } from 'react-router-dom';
 import {
   ArrowRight,
+  Check,
   BadgeCheck,
+  CalendarClock,
   Code2,
-  LayoutDashboard,
+  Handshake,
   MessageCircle,
   MonitorSmartphone,
+  ShieldCheck,
   Smartphone,
-  Target,
   TrendingUp,
+  Wrench,
   Zap
 } from 'lucide-react';
 
@@ -18,14 +22,15 @@ import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import CTA from '../components/CTA.jsx';
+import Faq from '../components/Faq.jsx';
 import { projects } from '../data/projects.js';
-import { services } from '../data/services.js';
+import { catalog, positioning } from '../data/catalog.js';
 
 const stats = [
-  ['+6', 'projetos premium'],
-  ['100%', 'mobile first'],
-  ['React', 'alta performance'],
-  ['IA', 'automações inteligentes']
+  ['6', 'modelos prontos'],
+  ['7 a 15', 'dias de entrega'],
+  ['12 meses', 'de garantia'],
+  ['3 meses', 'de acompanhamento']
 ];
 
 const projectOrder = [
@@ -53,12 +58,12 @@ const benefits = [
   [
     Smartphone,
     'Pensado para celular',
-    'A maior parte dos clientes acessa pelo smartphone. Por isso, cada detalhe é pensado para mobile.'
+    'A maior parte dos seus clientes acessa pelo smartphone. Por isso cada detalhe começa pelo mobile.'
   ],
   [
-    Code2,
-    'Tecnologia moderna',
-    'Sites, sistemas e automações desenvolvidos com estrutura leve, moderna e preparada para evoluir.'
+    MessageCircle,
+    'WhatsApp integrado',
+    'O cliente entende sua empresa, chama no WhatsApp e é atendido de forma mais rápida e organizada.'
   ],
   [
     Zap,
@@ -67,27 +72,18 @@ const benefits = [
   ]
 ];
 
-const agencyHighlights = [
-  [
-    MonitorSmartphone,
-    'Visual premium em todos os dispositivos',
-    'Seu projeto precisa impressionar no computador, mas principalmente no celular.'
-  ],
-  [
-    Target,
-    'Estrutura focada em resultado',
-    'Não criamos apenas páginas bonitas. Criamos soluções pensadas para gerar contato e facilitar processos.'
-  ],
-  [
-    MessageCircle,
-    'WhatsApp e atendimento integrado',
-    'O cliente entende sua empresa, chama no WhatsApp e pode ser atendido de forma mais rápida e organizada.'
-  ],
-  [
-    LayoutDashboard,
-    'Projetos sob medida',
-    'Sites, sistemas, aplicativos e automações personalizadas para diferentes tipos de negócios.'
-  ]
+const comoFunciona = [
+  ['01', 'Conversa', 'Você conta o que precisa. Entendo a empresa, a rotina e o objetivo do projeto.'],
+  ['02', 'Proposta', 'Defino a melhor solução e apresento o orçamento, sem compromisso.'],
+  ['03', 'Desenvolvimento', 'Crio o projeto e acompanho você durante as etapas, com ajustes no caminho.'],
+  ['04', 'No ar', 'Publico, configuro tudo e o projeto entra em funcionamento com garantia.']
+];
+
+const garantias = [
+  [ShieldCheck, '12 meses de garantia', 'Correções relacionadas ao desenvolvimento cobertas por um ano após a entrega.'],
+  [Handshake, '3 meses de acompanhamento', 'O Programa de Acompanhamento AJ Digital segue com você nos primeiros meses no ar.'],
+  [CalendarClock, 'Entrega em 7 a 15 dias', 'Prazo normal de um projeto, conforme o tamanho e o retorno das informações.'],
+  [Wrench, 'Publicação inclusa', 'Hospedagem, domínio, DNS e certificado SSL configurados pela AJ Digital.']
 ];
 
 const appExperienceHighlights = [
@@ -119,16 +115,32 @@ export default function Home() {
         <div className="hero-orb hero-orb-two"></div>
 
         <Reveal className="hero-copy">
-          <span className="eyebrow">AJ Digital • Sites, Apps e Automações</span>
+          <span className="eyebrow">AJ Digital • Atendemos todo o Brasil</span>
+
+          <ul className="positioning-claim">
+            <li>Sites</li>
+            <li>Sistemas</li>
+            <li>Aplicativos</li>
+            <li>Automações</li>
+          </ul>
 
           <h1>
             Automatizamos processos e criamos soluções digitais para empresas.
           </h1>
 
-          <p>
-            Desenvolvemos sites profissionais, aplicativos e automações inteligentes para empresas
-            que querem ganhar tempo, melhorar o atendimento e transformar tecnologia em resultado.
-          </p>
+          <p>{positioning.description}</p>
+
+          <ul className="hero-proof">
+            <li>
+              <ShieldCheck size={15} /> 12 meses de garantia
+            </li>
+            <li>
+              <CalendarClock size={15} /> Entrega em 7 a 15 dias
+            </li>
+            <li>
+              <MessageCircle size={15} /> Atendimento direto com quem desenvolve
+            </li>
+          </ul>
 
           <div className="hero-actions">
             <a
@@ -233,7 +245,7 @@ export default function Home() {
       <section className="section-padding app-experience-section">
         <div className="app-experience-content">
           <Reveal className="app-experience-copy">
-            <span className="eyebrow">Nova fase AJ Digital</span>
+            <span className="eyebrow">O que a AJ Digital faz</span>
 
             <h2>
               Sua empresa pode ter site, aplicativo e automações trabalhando juntos.
@@ -306,8 +318,8 @@ export default function Home() {
       <section className="section-padding portfolio-premium-section">
         <SectionTitle
           eyebrow="Portfólio"
-          title="Modelos premium criados para empresas reais"
-          text="Projetos com visual profissional, estrutura estratégica e foco em gerar mais confiança antes do primeiro contato."
+          title="Modelos criados para diferentes segmentos"
+          text="Demonstrações navegáveis que mostram o padrão de entrega: visual, velocidade e integração com WhatsApp. Projetos de clientes entram aqui conforme forem publicados."
         />
 
         <div className="premium-portfolio-layout">
@@ -330,50 +342,19 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="section-padding agency-section">
-        <div className="agency-content">
-          <Reveal className="agency-copy">
-            <span className="eyebrow">Muito além de um site bonito</span>
-
-            <h2>
-              Sua empresa precisa de tecnologia para atrair clientes, economizar tempo e organizar processos.
-            </h2>
-
-            <p>
-              Um site profissional melhora a percepção da sua marca. Mas quando ele é combinado com
-              automações, WhatsApp, sistemas e integrações, sua empresa passa a trabalhar de forma mais
-              rápida, moderna e eficiente.
-            </p>
-
-            <a
-              className="primary-btn"
-              href="https://wa.me/5548991087702?text=Olá,%20quero%20entender%20como%20soluções%20digitais%20e%20automações%20podem%20ajudar%20minha%20empresa."
-              target="_blank"
-              rel="noreferrer"
-            >
-              Quero melhorar minha empresa <ArrowRight size={18} />
-            </a>
-          </Reveal>
-
-          <div className="agency-grid">
-            {agencyHighlights.map(([Icon, title, text]) => (
-              <Reveal className="agency-card" key={title}>
-                <Icon size={26} />
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </Reveal>
-            ))}
-          </div>
+        <div className="section-more only-mobile">
+          <Link className="secondary-btn" to="/portfolio">
+            Ver os 6 modelos <ArrowRight size={17} />
+          </Link>
         </div>
       </section>
 
       <section className="section-padding why-section">
         <SectionTitle
           eyebrow="Por que investir"
-          title="Automação e presença digital mudam a forma como sua empresa trabalha"
-          text="Além de atrair mais confiança, a tecnologia pode reduzir tarefas manuais, agilizar atendimentos e melhorar a experiência do cliente."
+          title="Sua empresa precisa de tecnologia para atrair clientes, economizar tempo e organizar processos"
+          text="Um site profissional melhora a percepção da sua marca. Combinado com WhatsApp, sistemas e automações, sua empresa passa a trabalhar de forma mais rápida e eficiente."
         />
 
         <div className="service-grid">
@@ -387,22 +368,126 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding services-section">
         <SectionTitle
-          eyebrow="Serviços"
-          title="Soluções digitais para empresas que querem crescer"
-          text="Criamos sites, aplicativos, sistemas e automações personalizadas para negócios que querem mais presença, produtividade e resultado."
+          eyebrow="O que desenvolvemos"
+          title="Quatro frentes, um objetivo: resolver o problema da sua empresa"
+          text="Site para apresentar, sistema para organizar, automação para eliminar o repetitivo e experiência mobile para atender onde o seu cliente está."
         />
 
-        <div className="service-grid">
-          {services.slice(0, 6).map(({ icon: Icon, title, description }) => (
-            <Reveal className="service-card" key={title}>
+        <div className="catalog-preview-grid">
+          {catalog.map(({ id, icon: Icon, title, summary, destaques }) => (
+            <Reveal className="catalog-preview-card" key={id}>
               <Icon size={28} />
+
               <h3>{title}</h3>
-              <p>{description}</p>
+              <p>{summary}</p>
+
+              <ul>
+                {destaques.map((item) => (
+                  <li key={item}>
+                    <Check size={15} /> {item}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           ))}
         </div>
+
+        <div className="section-more">
+          <Link className="secondary-btn" to="/servicos#catalogo">
+            Ver tudo o que a AJ Digital desenvolve <ArrowRight size={17} />
+          </Link>
+        </div>
+      </section>
+
+      <section className="section-padding how-section">
+        <SectionTitle
+          eyebrow="Como funciona"
+          title="Do primeiro contato no WhatsApp até o projeto no ar"
+          text="Sem burocracia e sem termo técnico. Você acompanha cada etapa e fala sempre com a mesma pessoa."
+        />
+
+        <div className="about-process-grid">
+          {comoFunciona.map(([number, title, text]) => (
+            <Reveal className="about-process-card" key={number}>
+              <strong>{number}</strong>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="how-section-link">
+          <Link className="secondary-btn" to="/processo">
+            Ver o processo completo <ArrowRight size={17} />
+          </Link>
+        </Reveal>
+      </section>
+
+      <section className="section-padding home-founder-section">
+        <div className="home-founder-card">
+          <Reveal className="home-founder-photo">
+            <img
+              src="/andre-quadrado.webp"
+              alt="André Filipe Jacinto, fundador da AJ Digital"
+              width="600"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </Reveal>
+
+          <Reveal className="home-founder-copy" delay={0.1}>
+            <span className="eyebrow">Quem está por trás</span>
+
+            <h2>Você não fala com um robô nem com um vendedor.</h2>
+
+            <p>
+              Sou André Filipe Jacinto, desenvolvedor e analista de sistemas, formado em Análise e
+              Desenvolvimento de Sistemas. Trabalho com desenvolvimento desde 2021 e criei a AJ
+              Digital para levar tecnologia de verdade para empresas que ainda dependem de processo
+              manual.
+            </p>
+
+            <p>
+              Participo de todas as etapas: a primeira conversa, o planejamento, o desenvolvimento,
+              a publicação e a evolução do projeto.
+            </p>
+
+            <Link className="text-link" to="/sobre">
+              Conhecer minha trajetória <ArrowRight size={17} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-padding guarantees-section">
+        <SectionTitle
+          eyebrow="Segurança para contratar"
+          title="O que já está garantido no seu projeto"
+          text="Contratar desenvolvimento gera dúvida, e é justo. Por isso o que está incluído fica escrito aqui, não só na conversa."
+        />
+
+        <div className="about-guarantees-grid">
+          {garantias.map(([Icon, title, text]) => (
+            <Reveal className="about-guarantee-card" key={title}>
+              <Icon size={26} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-padding faq-section">
+        <SectionTitle
+          eyebrow="Dúvidas frequentes"
+          title="As perguntas que todo cliente faz antes de fechar"
+          text="Se a sua dúvida não estiver aqui, é só chamar no WhatsApp que eu respondo."
+        />
+
+        <Faq />
       </section>
 
       <CTA />
