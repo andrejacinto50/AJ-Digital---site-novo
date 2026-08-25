@@ -1,6 +1,8 @@
+import { useMemo, useState } from 'react';
 import {
   ArrowRight,
   Code2,
+  FlaskConical,
   MessageCircle,
   MonitorSmartphone,
   Smartphone,
@@ -18,10 +20,10 @@ import CTA from '../components/CTA.jsx';
 import { projects } from '../data/projects.js';
 
 const portfolioStats = [
-  ['+6', 'projetos premium'],
-  ['100%', 'mobile first'],
-  ['React', 'alta performance'],
-  ['IA', 'automações inteligentes']
+  ['6', 'modelos prontos'],
+  ['7 a 15', 'dias de entrega'],
+  ['12 meses', 'de garantia'],
+  ['3 meses', 'de acompanhamento']
 ];
 
 const portfolioHighlights = [
@@ -43,6 +45,22 @@ const portfolioHighlights = [
 ];
 
 export default function Portfolio() {
+  const [segmento, setSegmento] = useState('Todos');
+
+  const segmentos = useMemo(
+    () => ['Todos', ...new Set(projects.map((project) => project.category))],
+    []
+  );
+
+  const projetosVisiveis = useMemo(
+    () =>
+      [...projects]
+        // Projeto em destaque primeiro, como acontece no inicio.
+        .sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)))
+        .filter((project) => segmento === 'Todos' || project.category === segmento),
+    [segmento]
+  );
+
   return (
     <PageTransition>
       <Seo {...pageSeo.portfolio} />
@@ -59,9 +77,9 @@ export default function Portfolio() {
           </h1>
 
           <p>
-            Modelos premium para diferentes segmentos, criados com visual profissional,
-            experiência mobile, tecnologia moderna e possibilidade de evoluir para sistemas,
-            aplicativos e automações.
+            Modelos demonstrativos criados pela AJ Digital para diferentes segmentos, com visual
+            profissional, experiência mobile e tecnologia moderna. Cada um pode ser aberto e
+            navegado no celular ou no computador.
           </p>
 
           <div className="portfolio-hero-actions">
@@ -129,8 +147,38 @@ export default function Portfolio() {
           text="Use esses modelos como referência para imaginar o nível de presença digital, experiência e automação que sua empresa pode ter."
         />
 
+        <Reveal className="portfolio-models-note">
+          <FlaskConical size={26} />
+
+          <div>
+            <p>
+              <strong>Estes seis projetos são modelos, não sites de clientes.</strong> Foram
+              criados pela AJ Digital para mostrar na prática o padrão de entrega: estrutura,
+              visual, velocidade e integração com WhatsApp.
+            </p>
+
+            <p>
+              São demonstrações navegáveis — pode abrir, clicar e testar no celular. Projetos de
+              clientes entram aqui conforme forem publicados.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="portfolio-filter">
+          {segmentos.map((item) => (
+            <button
+              key={item}
+              type="button"
+              aria-pressed={segmento === item}
+              onClick={() => setSegmento(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+
         <div className="projects-grid portfolio-projects-grid">
-          {projects.map((project) => (
+          {projetosVisiveis.map((project) => (
             <Reveal key={project.slug}>
               <ProjectCard project={project} />
             </Reveal>

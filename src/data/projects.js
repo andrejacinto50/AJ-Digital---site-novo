@@ -3,6 +3,8 @@ export const projects = [
     slug: 'loja-premium-whatsapp',
     title: 'Loja Premium WhatsApp',
     category: 'Lojas',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/lojapremium.webp',
     link: 'https://lojapremium.netlify.app/',
     gradient: 'gold',
@@ -108,6 +110,8 @@ export const projects = [
     slug: 'academia-premium',
     title: 'Academia Premium',
     category: 'Academias',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/academia.webp',
     link: 'https://academiapremium.netlify.app/',
     gradient: 'gold',
@@ -210,6 +214,8 @@ export const projects = [
     slug: 'barbearia-monarch',
     title: 'Barbearia Monarch',
     category: 'Barbearias',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/barbearia.webp',
     link: 'https://barbeariamonarch.netlify.app/',
     gradient: 'dark',
@@ -310,6 +316,8 @@ export const projects = [
     slug: 'restaurante-multipage',
     title: 'Restaurante Multipage',
     category: 'Restaurantes',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/restaurante.webp',
     link: 'https://restaurantemultipage.netlify.app/',
     gradient: 'dark',
@@ -412,6 +420,8 @@ export const projects = [
     slug: 'monarch-store',
     title: 'Monarch Store Ecommerce',
     category: 'E-commerce',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/loja.webp',
     link: 'https://monarchstore.netlify.app/',
     gradient: 'gold',
@@ -511,6 +521,8 @@ export const projects = [
     slug: 'barbearia-premium-multipagina',
     title: 'Barbearia Premium Multipágina',
     category: 'Barbearias',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'modelo',
     image: '/barbeariapremium.webp',
     link: 'https://barbeariapremiummultipagina.netlify.app/',
     gradient: 'dark',

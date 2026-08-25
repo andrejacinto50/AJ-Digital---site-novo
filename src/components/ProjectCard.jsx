@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ExternalLink, FlaskConical } from 'lucide-react';
 
 export default function ProjectCard({ project, priority = false }) {
+  const isModel = project.kind === 'modelo';
+
   return (
     <article className={`project-card ${project.gradient === 'gold' ? 'gold-card' : ''}`}>
       <div className="project-preview">
@@ -15,6 +17,12 @@ export default function ProjectCard({ project, priority = false }) {
           width="1280"
           height="640"
         />
+
+        {isModel && (
+          <span className="project-kind-badge">
+            <FlaskConical size={13} /> Modelo demonstrativo
+          </span>
+        )}
       </div>
 
       <div className="project-content">
@@ -30,9 +38,17 @@ export default function ProjectCard({ project, priority = false }) {
           ))}
         </ul>
 
-        <Link className="text-link" to={`/portfolio/${project.slug}`}>
-          Ver detalhes <ArrowUpRight size={17} />
-        </Link>
+        <div className="project-card-actions">
+          <Link className="text-link" to={`/portfolio/${project.slug}`}>
+            Ver detalhes <ArrowUpRight size={17} />
+          </Link>
+
+          {project.link && (
+            <a className="text-link subtle" href={project.link} target="_blank" rel="noreferrer">
+              Ver demo <ExternalLink size={15} />
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

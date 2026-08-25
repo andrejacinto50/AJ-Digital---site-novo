@@ -5,6 +5,7 @@ import {
   BadgeCheck,
   CheckCircle2,
   ExternalLink,
+  FlaskConical,
   Layers3,
   MessageCircle,
   MonitorSmartphone,
@@ -40,6 +41,8 @@ export default function ProjectDetails() {
     );
   }
 
+  const isModel = project.kind === 'modelo';
+
   const whatsappMessage = encodeURIComponent(project.ctaMessage || `Olá, vi o projeto ${project.title} da AJ Digital e quero algo parecido.`);
   const whatsappLink = `https://wa.me/5548991087702?text=${whatsappMessage}`;
 
@@ -56,7 +59,15 @@ export default function ProjectDetails() {
             <ArrowLeft size={17} /> Voltar ao portfólio
           </Link>
 
-          <span className="eyebrow">{project.category}</span>
+          <div className="project-detail-tags">
+            <span className="eyebrow">{project.category}</span>
+
+            {isModel && (
+              <span className="project-kind-badge is-static">
+                <FlaskConical size={13} /> Modelo demonstrativo
+              </span>
+            )}
+          </div>
 
           <h1>{project.title}</h1>
 
@@ -81,6 +92,15 @@ export default function ProjectDetails() {
               {project.ctaText || 'Quero algo parecido'}
             </a>
           </div>
+
+          {isModel && (
+            <p className="project-detail-disclaimer">
+              Este é um modelo demonstrativo criado pela AJ Digital para mostrar o padrão de
+              entrega. Pode abrir e navegar à vontade — o projeto da sua empresa é feito do zero,
+              com o conteúdo, as cores e as funcionalidades que fizerem sentido para o seu
+              negócio.
+            </p>
+          )}
         </Reveal>
 
         <Reveal className="detail-premium-mockup" delay={0.12}>
@@ -91,7 +111,9 @@ export default function ProjectDetails() {
           </div>
 
           <div className="detail-mockup-content">
-            <span className="detail-mockup-badge">Projeto Premium</span>
+            <span className="detail-mockup-badge">
+              {isModel ? 'Modelo demonstrativo' : 'Projeto de cliente'}
+            </span>
             <h3>{project.title}</h3>
 
             <div className="detail-mock-lines">
