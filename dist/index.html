@@ -3,12 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AJ Digital - Sites profissionais para empresas que querem crescer." />
-    <title>AJ Digital</title>
-    <script type="module" crossorigin src="/assets/index-CW89x7az.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B-dTRdY9.css">
+
+    <title>AJ Digital | Sites, aplicativos e automações na Grande Florianópolis</title>
+    <meta
+      name="description"
+      content="Sites profissionais, aplicativos e automações inteligentes para empresas da Grande Florianópolis. Projetos em React, mobile first e integrados ao WhatsApp."
+    />
+    <link rel="canonical" href="https://ajdigital.dev.br/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AJ Digital" />
+    <meta name="theme-color" content="#050505" />
+
+    <link rel="icon" type="image/png" href="/ajdigital.png" />
+    <link rel="apple-touch-icon" href="/ajdigital.png" />
+
+    <!-- Preview de link (WhatsApp, Instagram, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AJ Digital" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="AJ Digital | Sites, aplicativos e automações na Grande Florianópolis" />
+    <meta
+      property="og:description"
+      content="Sites profissionais, aplicativos e automações inteligentes para empresas da Grande Florianópolis. Projetos em React, mobile first e integrados ao WhatsApp."
+    />
+    <meta property="og:url" content="https://ajdigital.dev.br/" />
+    <meta property="og:image" content="https://ajdigital.dev.br/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AJ Digital | Sites, aplicativos e automações na Grande Florianópolis" />
+    <meta
+      name="twitter:description"
+      content="Sites profissionais, aplicativos e automações inteligentes para empresas da Grande Florianópolis."
+    />
+    <meta name="twitter:image" content="https://ajdigital.dev.br/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "AJ Digital",
+        "url": "https://ajdigital.dev.br",
+        "image": "https://ajdigital.dev.br/og-image.jpg",
+        "description": "Desenvolvimento de sites profissionais, sistemas sob medida, aplicativos e automações para pequenas e médias empresas.",
+        "founder": {
+          "@type": "Person",
+          "name": "André Filipe Jacinto"
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Grande Florianópolis, Santa Catarina" },
+          { "@type": "Country", "name": "Brasil" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        },
+        "telephone": "+5548991087702",
+        "email": "andrejacinto80@gmail.com",
+        "priceRange": "$$",
+        "sameAs": ["https://instagram.com/aj__digital"],
+        "knowsAbout": [
+          "Desenvolvimento de sites",
+          "Landing pages",
+          "Aplicativos Android e iOS",
+          "Automação de processos",
+          "Integração com WhatsApp"
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-_A1M99xe.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DnzUhtss.css">
   </head>
   <body>
-    <div id="root"></div>
+    <!--
+      Formulário estático que o Netlify detecta no build. O envio real acontece
+      pelo React (src/components/ContactForm.jsx); os campos precisam bater.
+    -->
+    <form name="orcamento" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nome" />
+      <input type="text" name="empresa" />
+      <input type="tel" name="whatsapp" />
+      <input type="email" name="email" />
+      <input type="text" name="tipo" />
+      <textarea name="mensagem"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <div id="root"></div>
   </body>
 </html>
