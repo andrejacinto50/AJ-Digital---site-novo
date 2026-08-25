@@ -1,15 +1,17 @@
 import {
   ArrowRight,
   BadgeCheck,
+  CalendarClock,
   Code2,
+  Handshake,
   Layers3,
   MessageCircle,
   MonitorSmartphone,
   Rocket,
   ShieldCheck,
   Sparkles,
-  Target,
-  Zap
+  Workflow,
+  Wrench
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
@@ -21,34 +23,98 @@ import CTA from '../components/CTA.jsx';
 const techs = [
   'React',
   'JavaScript',
-  'HTML & CSS',
+  'Java',
+  'Spring Boot',
   'Supabase',
-  'Mobile First',
-  'WhatsApp',
+  'APIs REST',
+  'Git',
   'Automações',
   'Inteligência Artificial'
 ];
 
-const values = [
+/** Trajetória real, de 2021 até hoje. */
+const timeline = [
   [
-    ShieldCheck,
-    'Credibilidade',
-    'Criamos soluções digitais que fazem sua empresa parecer mais profissional logo no primeiro contato.'
+    '2021',
+    'O começo',
+    'Primeiros passos no desenvolvimento de software, transformando o que eu estudava em código de verdade.'
   ],
   [
-    Target,
-    'Estratégia',
-    'Cada projeto tem uma função: apresentar, gerar confiança, organizar processos e facilitar resultados.'
+    'Formação',
+    'Análise e Desenvolvimento de Sistemas',
+    'Primeira experiência profissional desenvolvendo sistemas com Java, JSF, Hibernate, bancos de dados e React.'
   ],
+  [
+    'Empresas',
+    'Analista de Sistemas e Suporte Técnico',
+    'Onde aprendi que desenvolver não é só escrever código: é entender quem usa, achar o problema e resolver o processo.'
+  ],
+  [
+    '2026',
+    'Nasce a AJ Digital',
+    'Conversando com empresários, percebi quanta coisa ainda depende de trabalho manual. A empresa nasceu daí.'
+  ],
+  [
+    'Hoje',
+    'Sistemas, integrações e automações',
+    'Sites, painéis administrativos, APIs, bancos de dados e automação de processos — com IA como ferramenta de apoio.'
+  ]
+];
+
+/** O que a tecnologia resolve, na prática. */
+const problemas = [
   [
     MonitorSmartphone,
-    'Experiência mobile',
-    'Sites e sistemas pensados primeiro para celular, com visual limpo, rápido e parecido com aplicativo.'
+    'Um site melhora a presença',
+    'Sua empresa deixa de depender só do Instagram e passa a ter um endereço próprio, profissional e rápido.'
+  ],
+  [
+    Layers3,
+    'Um sistema organiza a operação',
+    'Informações espalhadas em papel, planilha e caderno viram um lugar só, acessível de qualquer dispositivo.'
+  ],
+  [
+    Workflow,
+    'Uma integração conecta ferramentas',
+    'Sistemas que não conversam passam a trocar informação sozinhos, sem ninguém copiando dado de um lado para o outro.'
+  ],
+  [
+    Rocket,
+    'Uma automação elimina o repetitivo',
+    'Aquela tarefa que alguém faz manualmente todo dia deixa de existir — e a equipe volta a cuidar do que importa.'
+  ]
+];
+
+const garantias = [
+  [
+    ShieldCheck,
+    '12 meses de garantia',
+    'Correções relacionadas ao desenvolvimento cobertas por um ano inteiro após a entrega.'
+  ],
+  [
+    Handshake,
+    '3 meses de acompanhamento',
+    'O Programa de Acompanhamento AJ Digital segue com você nos primeiros meses do projeto no ar.'
+  ],
+  [
+    CalendarClock,
+    'Entrega em 7 a 15 dias',
+    'É o prazo normal de um projeto, conforme o tamanho e o retorno das informações.'
+  ],
+  [
+    BadgeCheck,
+    'Entrega conforme o combinado',
+    'O que foi acordado na conversa é o que é entregue — sem surpresa no meio do caminho.'
+  ],
+  [
+    Wrench,
+    'Publicação e configuração inclusas',
+    'Hospedagem, domínio, DNS, certificado SSL e publicação. Você recebe o projeto no ar e funcionando.'
   ],
   [
     MessageCircle,
-    'Automação e atendimento',
-    'WhatsApp integrado, fluxos automatizados e soluções para agilizar a comunicação com o cliente.'
+    'Atendimento com quem desenvolve',
+    'Sem intermediário e sem robô: você fala direto comigo, do primeiro contato à publicação.'
   ]
 ];
 
@@ -72,13 +138,14 @@ export default function About() {
           <span className="eyebrow">Sobre a AJ Digital</span>
 
           <h1>
-            Muito além de um site bonito. Soluções digitais pensadas para transformar empresas.
+            A AJ Digital tem marca, site e tecnologia. Mas tem, principalmente, uma pessoa por trás.
           </h1>
 
           <p>
-            A AJ Digital nasceu para ajudar empresas locais a usarem a tecnologia de forma mais
-            estratégica, com sites profissionais, sistemas, aplicativos e automações inteligentes
-            que melhoram a presença digital, organizam processos e geram mais oportunidades.
+            Sou André Filipe Jacinto, desenvolvedor, analista de sistemas e fundador da AJ Digital.
+            Trabalho com desenvolvimento desde 2021 e hoje ajudo empresas a usarem tecnologia para
+            resolver problemas reais: presença digital, organização de processos e automação do que
+            é repetitivo.
           </p>
 
           <div className="about-hero-actions">
@@ -92,7 +159,7 @@ export default function About() {
             </a>
 
             <a className="secondary-btn" href="/portfolio">
-              Ver projetos criados
+              Ver modelos criados
             </a>
           </div>
         </Reveal>
@@ -107,78 +174,96 @@ export default function About() {
             </span>
 
             <h2>
-              Sou André Filipe Jacinto, fundador da AJ Digital.
+              Minha história com desenvolvimento começou em 2021.
             </h2>
 
             <p>
-              Minha missão é transformar a forma como pequenas e médias empresas utilizam a
-              tecnologia. Não desenvolvo apenas páginas bonitas: crio soluções digitais que
-              valorizam a marca, melhoram processos, facilitam o atendimento e fortalecem a
-              presença online.
+              Desde então venho construindo uma trajetória que passou por desenvolvimento Full
+              Stack, análise de sistemas, suporte técnico, projetos para empresas e, mais
+              recentemente, pela criação da minha própria empresa.
             </p>
 
             <p>
-              Hoje, a AJ Digital trabalha com projetos desenvolvidos em React, com foco em
-              performance, experiência no celular, visual premium, integração com WhatsApp,
-              sistemas personalizados e automações inteligentes.
+              Participo pessoalmente de todas as etapas dos projetos: a primeira conversa, o
+              levantamento das necessidades, o planejamento, o desenvolvimento, os testes, a
+              publicação e a evolução da solução. Quem você chama no WhatsApp é quem desenvolve.
             </p>
 
             <div className="about-founder-highlight">
               <Rocket size={22} />
               <span>
-                Tecnologia criada para empresas que querem sair do improviso e trabalhar de forma mais profissional.
+                Tecnologia criada para empresas que querem sair do improviso e trabalhar de forma
+                mais profissional.
               </span>
             </div>
           </Reveal>
 
           <Reveal className="about-visual-panel" delay={0.15}>
-            <div className="about-code-window">
-              <div className="browser-bar gold-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div className="about-code-content">
-                <span className="code-line gold">const ajDigital = &#123;</span>
-                <span className="code-line">sites: 'profissionais',</span>
-                <span className="code-line">sistemas: 'sob medida',</span>
-                <span className="code-line">automacoes: 'inteligentes',</span>
-                <span className="code-line">objetivo: 'gerar resultado',</span>
-                <span className="code-line gold">&#125;;</span>
-              </div>
+            <div className="about-photo-frame">
+              <img
+                src="/andre.webp"
+                alt="André Filipe Jacinto, fundador da AJ Digital"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="about-floating-badge badge-one">
-                <strong>React</strong>
-                <small>Alta performance</small>
+                <strong>Desde 2021</strong>
+                <small>Desenvolvendo software</small>
               </div>
 
               <div className="about-floating-badge badge-two">
-                <strong>IA</strong>
-                <small>Automação inteligente</small>
+                <strong>ADS</strong>
+                <small>Análise e Desenvolvimento</small>
               </div>
 
               <div className="about-floating-badge badge-three">
                 <strong>WhatsApp</strong>
-                <small>Contato direto</small>
+                <small>Contato direto comigo</small>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
+      <section className="section-padding about-timeline-section">
+        <Reveal className="about-section-heading">
+          <span className="eyebrow">Trajetória</span>
+          <h2>De estudante de programação a fundador da AJ Digital.</h2>
+          <p>
+            Mais de cinco anos construindo experiência em tecnologia — com a mesma curiosidade do
+            começo, mas com outra visão sobre o papel de um desenvolvedor dentro de uma empresa.
+          </p>
+        </Reveal>
+
+        <div className="about-timeline">
+          {timeline.map(([marco, title, text]) => (
+            <Reveal className="about-timeline-item" key={title}>
+              <span className="about-timeline-marker">{marco}</span>
+
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       <section className="section-padding about-values-section">
         <Reveal className="about-section-heading">
-          <span className="eyebrow">O que guia cada projeto</span>
-          <h2>Design, tecnologia, automação e estratégia trabalhando juntos.</h2>
+          <span className="eyebrow">Como eu trabalho</span>
+          <h2>Antes de escolher a tecnologia, a pergunta é outra: qual problema precisamos resolver?</h2>
           <p>
-            Cada solução é pensada para apresentar sua empresa com mais valor, melhorar a experiência
-            do cliente, reduzir tarefas manuais e facilitar o crescimento do negócio.
+            É essa pergunta que define se o seu caso pede um site, um sistema, uma integração ou
+            uma automação — e não o contrário.
           </p>
         </Reveal>
 
         <div className="about-values-grid">
-          {values.map(([Icon, title, text]) => (
+          {problemas.map(([Icon, title, text]) => (
             <Reveal className="about-value-card" key={title}>
               <Icon size={28} />
               <h3>{title}</h3>
@@ -186,6 +271,66 @@ export default function About() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="about-ai-note">
+          <Code2 size={24} />
+
+          <p>
+            Uso Inteligência Artificial como ferramenta de apoio em várias etapas — análise,
+            planejamento, investigação de problemas, documentação e produtividade — sempre
+            mantendo a validação técnica e o controle sobre aquilo que é entregue.
+          </p>
+        </Reveal>
+      </section>
+
+      <section className="section-padding about-guarantees-section">
+        <Reveal className="about-section-heading">
+          <span className="eyebrow">Segurança para contratar</span>
+          <h2>O que você tem garantido ao fechar um projeto.</h2>
+          <p>
+            Contratar desenvolvimento gera dúvida — e é justo. Por isso o que está incluído fica
+            escrito aqui, não só na conversa.
+          </p>
+        </Reveal>
+
+        <div className="about-guarantees-grid">
+          {garantias.map(([Icon, title, text]) => (
+            <Reveal className="about-guarantee-card" key={title}>
+              <Icon size={26} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-padding about-investment-section">
+        <Reveal className="about-investment-card">
+          <span className="eyebrow">Investimento</span>
+
+          <h2>Por que não existe uma tabela de preços aqui</h2>
+
+          <p>
+            Cada projeto é diferente do outro e cada um tem sua personalização. Uma loja com
+            catálogo e painel administrativo não custa o mesmo que uma landing page, e um sistema
+            interno não custa o mesmo que um site institucional.
+          </p>
+
+          <p>
+            Por isso o valor sai depois de entender o que você precisa: o que vai ser desenvolvido,
+            o que o projeto vai ter e o que faz sentido para o momento da sua empresa. A conversa e
+            o orçamento não têm custo nenhum.
+          </p>
+
+          <a
+            className="primary-btn"
+            href="https://wa.me/5548991087702?text=Olá,%20quero%20um%20orçamento%20para%20o%20meu%20projeto%20com%20a%20AJ%20Digital."
+            target="_blank"
+            rel="noreferrer"
+          >
+            Pedir meu orçamento <ArrowRight size={18} />
+          </a>
+        </Reveal>
       </section>
 
       <section className="section-padding about-tech-section">
@@ -198,8 +343,9 @@ export default function About() {
             </h2>
 
             <p>
-              A AJ Digital utiliza tecnologias modernas para criar sites, sistemas e automações
-              rápidos, organizados, responsivos e preparados para crescer junto com sua empresa.
+              Trabalho principalmente com React, JavaScript, Java, Spring Boot, Supabase, APIs REST
+              e Git, estudando continuamente desenvolvimento Full Stack, arquitetura de aplicações,
+              automações e Inteligência Artificial aplicada ao desenvolvimento de software.
             </p>
           </Reveal>
 
