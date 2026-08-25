@@ -11,9 +11,15 @@ import Portfolio from './pages/Portfolio.jsx';
 import Process from './pages/Process.jsx';
 import Contact from './pages/Contact.jsx';
 import ProjectDetails from './pages/ProjectDetails.jsx';
+import NotFound from './pages/NotFound.jsx';
+import { trackPageView } from './lib/analytics.js';
 
 export default function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location.pathname]);
 
   useEffect(() => {
   const applyMobileClass = () => {
@@ -47,6 +53,7 @@ export default function App() {
           <Route path="/portfolio/:slug" element={<ProjectDetails />} />
           <Route path="/processo" element={<Process />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
       <Footer />

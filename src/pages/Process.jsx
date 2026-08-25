@@ -9,6 +9,8 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import CTA from '../components/CTA.jsx';
 
@@ -52,6 +54,8 @@ const deliverables = [
 export default function Process() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.process} />
+
       <section className="page-hero process-hero section-padding compact-hero">
         <div className="process-orb process-orb-one"></div>
         <div className="process-orb process-orb-two"></div>

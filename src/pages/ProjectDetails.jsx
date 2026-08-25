@@ -15,9 +15,11 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import CTA from '../components/CTA.jsx';
 import { projects } from '../data/projects.js';
+import { pageSeo, projectSeo } from '../data/seo.js';
 
 export default function ProjectDetails() {
   const { slug } = useParams();
@@ -26,6 +28,8 @@ export default function ProjectDetails() {
   if (!project) {
     return (
       <PageTransition>
+        <Seo {...pageSeo.notFound} />
+
         <section className="section-padding compact-hero">
           <h1>Projeto não encontrado</h1>
           <Link className="secondary-btn" to="/portfolio">
@@ -41,6 +45,8 @@ export default function ProjectDetails() {
 
   return (
     <PageTransition>
+      <Seo {...projectSeo(project)} type="article" />
+
       <section className="page-hero project-detail-hero section-padding">
         <div className="project-detail-orb detail-orb-one"></div>
         <div className="project-detail-orb detail-orb-two"></div>

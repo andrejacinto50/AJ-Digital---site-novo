@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import CTA from '../components/CTA.jsx';
@@ -70,6 +72,8 @@ const idealFor = [
 export default function Services() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.services} />
+
       <section className="page-hero services-hero section-padding compact-hero">
         <div className="services-hero-orb services-orb-one"></div>
         <div className="services-hero-orb services-orb-two"></div>

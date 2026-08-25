@@ -9,11 +9,16 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
+import ContactForm from '../components/ContactForm.jsx';
 
 export default function Contact() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.contact} />
+
       <section className="page-hero contact-hero section-padding">
         <div className="contact-orb contact-orb-one"></div>
         <div className="contact-orb contact-orb-two"></div>
@@ -59,6 +64,21 @@ export default function Contact() {
             Hoje desenvolvemos sites profissionais, sistemas sob medida,
             aplicativos, integrações com WhatsApp e automações inteligentes.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="section-padding contact-form-section">
+        <Reveal className="contact-form-intro">
+          <h2>Conte o que você precisa</h2>
+
+          <p>
+            Preencha os campos e a conversa abre no WhatsApp com tudo já escrito.
+            Sem formulário perdido, sem espera: você só aperta enviar.
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <ContactForm />
         </Reveal>
       </section>
 

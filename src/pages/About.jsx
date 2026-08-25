@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import CTA from '../components/CTA.jsx';
 
@@ -60,6 +62,8 @@ const process = [
 export default function About() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.about} />
+
       <section className="page-hero about-hero section-padding compact-hero">
         <div className="about-hero-orb about-orb-one"></div>
         <div className="about-hero-orb about-orb-two"></div>

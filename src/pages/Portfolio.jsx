@@ -9,6 +9,8 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
@@ -43,6 +45,8 @@ const portfolioHighlights = [
 export default function Portfolio() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.portfolio} />
+
       <section className="page-hero portfolio-hero section-padding compact-hero">
         <div className="portfolio-orb portfolio-orb-one"></div>
         <div className="portfolio-orb portfolio-orb-two"></div>
