@@ -17,9 +17,11 @@ export default function Footer() {
         <div className="footer-brand-column">
           <div className="footer-brand-wrap">
             <img
-              src="/ajdigital.png"
+              src="/ajdigital.webp"
               alt="AJ Digital"
               className="footer-logo"
+              width="58"
+              height="58"
             />
 
             <div>
@@ -89,9 +91,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=andrejacinto80@gmail.com&su=Solicitação%20de%20Orçamento%20-%20AJ%20Digital&body=Olá%20André,%20vim%20pelo%20site%20da%20AJ%20Digital%20e%20gostaria%20de%20mais%20informações%20sobre%20um%20projeto."
-            target="_blank"
-            rel="noreferrer"
+            href="mailto:andrejacinto80@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20Or%C3%A7amento%20-%20AJ%20Digital&body=Ol%C3%A1%20Andr%C3%A9%2C%20vim%20pelo%20site%20da%20AJ%20Digital%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20projeto."
           >
             <Mail size={16} />
             andrejacinto80@gmail.com

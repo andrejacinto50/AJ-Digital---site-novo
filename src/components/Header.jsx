@@ -18,9 +18,11 @@ export default function Header() {
    <header className="site-header">
   <Link to="/" className="brand" onClick={() => setOpen(false)}>
     <img
-      src="/ajdigital.png"
+      src="/ajdigital.webp"
       alt="AJ Digital"
       className="brand-logo"
+      width="44"
+      height="44"
     />
 
     <span>

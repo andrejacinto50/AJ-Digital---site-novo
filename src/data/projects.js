@@ -3,7 +3,7 @@ export const projects = [
     slug: 'loja-premium-whatsapp',
     title: 'Loja Premium WhatsApp',
     category: 'Lojas',
-    image: '/lojapremium.png',
+    image: '/lojapremium.webp',
     link: 'https://lojapremium.netlify.app/',
     gradient: 'gold',
     featured: true,
@@ -108,7 +108,7 @@ export const projects = [
     slug: 'academia-premium',
     title: 'Academia Premium',
     category: 'Academias',
-    image: '/academia.png',
+    image: '/academia.webp',
     link: 'https://academiapremium.netlify.app/',
     gradient: 'gold',
 
@@ -210,7 +210,7 @@ export const projects = [
     slug: 'barbearia-monarch',
     title: 'Barbearia Monarch',
     category: 'Barbearias',
-    image: '/barbearia.png',
+    image: '/barbearia.webp',
     link: 'https://barbeariamonarch.netlify.app/',
     gradient: 'dark',
 
@@ -310,7 +310,7 @@ export const projects = [
     slug: 'restaurante-multipage',
     title: 'Restaurante Multipage',
     category: 'Restaurantes',
-    image: '/restaurante.png',
+    image: '/restaurante.webp',
     link: 'https://restaurantemultipage.netlify.app/',
     gradient: 'dark',
 
@@ -412,7 +412,7 @@ export const projects = [
     slug: 'monarch-store',
     title: 'Monarch Store Ecommerce',
     category: 'E-commerce',
-    image: '/loja.png',
+    image: '/loja.webp',
     link: 'https://monarchstore.netlify.app/',
     gradient: 'gold',
 
@@ -511,7 +511,7 @@ export const projects = [
     slug: 'barbearia-premium-multipagina',
     title: 'Barbearia Premium Multipágina',
     category: 'Barbearias',
-    image: '/barbeariapremium.png',
+    image: '/barbeariapremium.webp',
     link: 'https://barbeariapremiummultipagina.netlify.app/',
     gradient: 'dark',
 

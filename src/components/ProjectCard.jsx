@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, priority = false }) {
   return (
     <article className={`project-card ${project.gradient === 'gold' ? 'gold-card' : ''}`}>
       <div className="project-preview">
         <img
           src={project.image}
-          alt={project.title}
+          alt={`Preview do projeto ${project.title}`}
           className="project-image"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
+          width="1280"
+          height="640"
         />
       </div>
 

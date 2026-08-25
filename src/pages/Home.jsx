@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
+import Seo from '../components/Seo.jsx';
+import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
@@ -109,6 +111,8 @@ const appExperienceHighlights = [
 export default function Home() {
   return (
     <PageTransition>
+      <Seo {...pageSeo.home} />
+
       <section className="hero hero-premium section-padding">
         <div className="hero-bg"></div>
         <div className="hero-orb hero-orb-one"></div>
@@ -314,7 +318,7 @@ export default function Home() {
                 <strong>Loja Premium com foco em WhatsApp</strong>
               </div>
 
-              <ProjectCard project={featuredProject} />
+              <ProjectCard project={featuredProject} priority />
             </Reveal>
           )}
 
