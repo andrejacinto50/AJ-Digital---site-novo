@@ -17,8 +17,9 @@ import Seo from '../components/Seo.jsx';
 import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
+import ServiceCatalog from '../components/ServiceCatalog.jsx';
+import { positioning } from '../data/catalog.js';
 import CTA from '../components/CTA.jsx';
-import { services } from '../data/services.js';
 
 const mainServices = [
   [
@@ -85,10 +86,7 @@ export default function Services() {
             Soluções digitais para empresas que querem vender melhor, economizar tempo e crescer com tecnologia.
           </h1>
 
-          <p>
-            De sites profissionais a automações inteligentes, cada projeto é pensado para fortalecer
-            sua presença digital, melhorar o atendimento e tornar sua empresa mais produtiva.
-          </p>
+          <p>{positioning.description}</p>
 
           <div className="services-hero-actions">
             <a
@@ -181,21 +179,24 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="section-padding services-original-section">
+      <section id="catalogo" className="section-padding services-catalog-section">
         <SectionTitle
-          eyebrow="Soluções disponíveis"
-          title="O que a AJ Digital pode criar para sua empresa"
-          text="Cada serviço pode ser adaptado conforme o segmento, objetivo, rotina e necessidade do seu negócio."
+          eyebrow="Catálogo completo"
+          title="Tudo o que a AJ Digital desenvolve"
+          text="Da landing page de uma campanha ao sistema que organiza a operação inteira. Se o que você precisa não estiver na lista, é só perguntar."
         />
 
-        <div className="service-grid">
-          {services.map(({ icon: Icon, title, description }) => (
-            <Reveal className="service-card" key={title}>
-              <Icon size={30} />
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </Reveal>
-          ))}
+        <ServiceCatalog />
+
+        <div className="section-more">
+          <a
+            className="primary-btn"
+            href="https://wa.me/5548991087702?text=Olá,%20vi%20o%20catálogo%20de%20serviços%20da%20AJ%20Digital%20e%20quero%20conversar%20sobre%20o%20meu%20projeto."
+            target="_blank"
+            rel="noreferrer"
+          >
+            Conversar sobre o meu caso <ArrowRight size={18} />
+          </a>
         </div>
       </section>
 

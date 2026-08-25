@@ -26,7 +26,7 @@ export default function Footer() {
 
             <div>
               <h3>AJ Digital</h3>
-              <span>Soluções Digitais para Empresas</span>
+              <span>Sites • Sistemas • Aplicativos • Automações</span>
             </div>
           </div>
 
@@ -47,7 +47,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div>
+        <div className="footer-nav-column">
           <h4>Navegação</h4>
 
           <Link to="/">Início</Link>
@@ -58,7 +58,7 @@ export default function Footer() {
           <Link to="/contato">Contato</Link>
         </div>
 
-        <div>
+        <div className="footer-solutions-column">
           <h4>Soluções</h4>
 
           <span>Sites Profissionais</span>
@@ -69,7 +69,7 @@ export default function Footer() {
           <span>Inteligência Artificial</span>
         </div>
 
-        <div>
+        <div className="footer-contact-column">
           <h4>Contato</h4>
 
           <a

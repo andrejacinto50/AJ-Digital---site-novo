@@ -17,7 +17,7 @@ export const INSTAGRAM = 'https://instagram.com/aj__digital';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export const DEFAULT_DESCRIPTION =
-  `Sites profissionais, aplicativos e automações inteligentes para empresas da ${REGION}. ` +
+  `Sites, sistemas, aplicativos e automações sob medida para empresas da ${REGION}. ` +
   'Projetos em React, mobile first e integrados ao WhatsApp.';
 
 /**
@@ -26,7 +26,7 @@ export const DEFAULT_DESCRIPTION =
  */
 export const pageSeo = {
   home: {
-    title: `AJ Digital | Sites, aplicativos e automações na ${REGION}`,
+    title: `AJ Digital | Sites, sistemas e automações na ${REGION}`,
     description: DEFAULT_DESCRIPTION,
     path: '/'
   },
@@ -42,8 +42,8 @@ export const pageSeo = {
   services: {
     title: 'Serviços | Sites, sistemas, apps e automação de processos',
     description:
-      'Sites profissionais, landing pages, sistemas sob medida, integração com WhatsApp, ' +
-      'aplicativos Android e iOS e automação de processos para empresas.',
+      'Catálogo completo: landing pages, sites institucionais, e-commerce, painéis ' +
+      'administrativos, sistemas de agendamento, automações e aplicativos Android e iOS.',
     path: '/servicos'
   },
 
@@ -66,7 +66,7 @@ export const pageSeo = {
   contact: {
     title: `Contato | Orçamento de site e automação na ${REGION}`,
     description:
-      `Peça um orçamento para o seu projeto digital. Atendimento por WhatsApp para empresas ` +
+      'Peça um orçamento para o seu projeto digital. Atendimento por WhatsApp para empresas ' +
       `da ${REGION} e de todo o Brasil.`,
     path: '/contato'
   },

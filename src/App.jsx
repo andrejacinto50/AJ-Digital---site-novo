@@ -21,6 +21,30 @@ export default function App() {
     trackPageView(location.pathname);
   }, [location.pathname]);
 
+  // Link do tipo /servicos#catalogo: o router troca a pagina, mas a rolagem
+  // ate a secao e por nossa conta. Como o AnimatePresence espera a animacao de
+  // saida terminar, a secao ainda nao existe no momento da troca de rota —
+  // por isso tentamos por alguns instantes em vez de olhar uma vez so.
+  useEffect(() => {
+    if (!location.hash) return undefined;
+
+    let tentativas = 0;
+    const intervalo = setInterval(() => {
+      const alvo = document.querySelector(location.hash);
+
+      if (alvo) {
+        alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        clearInterval(intervalo);
+        return;
+      }
+
+      // Desiste depois de ~2s: a ancora pode simplesmente nao existir.
+      if (++tentativas > 20) clearInterval(intervalo);
+    }, 100);
+
+    return () => clearInterval(intervalo);
+  }, [location.pathname, location.hash]);
+
   useEffect(() => {
   const applyMobileClass = () => {
     const isMobile =
