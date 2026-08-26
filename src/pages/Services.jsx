@@ -18,6 +18,8 @@ import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import ServiceCatalog from '../components/ServiceCatalog.jsx';
+import Faq from '../components/Faq.jsx';
+import { guarantees } from '../data/guarantees.js';
 import { positioning } from '../data/catalog.js';
 import CTA from '../components/CTA.jsx';
 
@@ -68,6 +70,42 @@ const idealFor = [
   'Prestadores de serviço que precisam transmitir mais confiança',
   'Marcas que querem melhorar sua apresentação digital',
   'Empresas que querem automatizar atendimento, processos ou rotinas internas'
+];
+
+/**
+ * Dúvidas de quem chega na página de serviços: quase sempre a pessoa sabe o
+ * problema, não o nome da solução. Preço, prazo e garantia ficam no Início,
+ * sem repetir.
+ */
+const faqServicos = [
+  {
+    question: 'Não sei o que minha empresa precisa. Isso é problema?',
+    answer:
+      'Não — é o caso mais comum. Você me conta como a empresa funciona hoje e onde perde tempo, ' +
+      'e eu digo o que faz sentido desenvolver. Muitas vezes a resposta é mais simples e mais ' +
+      'barata do que a pessoa imaginava.'
+  },
+  {
+    question: 'Dá para combinar mais de uma frente no mesmo projeto?',
+    answer:
+      'Dá, e é o mais frequente: site com painel administrativo, catálogo com automação de ' +
+      'atendimento, sistema com aplicação instalável no celular. As quatro frentes existem ' +
+      'separadas aqui só para facilitar o entendimento.'
+  },
+  {
+    question: 'Meu caso é pequeno demais para um sistema?',
+    answer:
+      'Sistema não é questão de tamanho de empresa, e sim de processo repetido. Se existe uma ' +
+      'tarefa que alguém faz todo dia na mão, normalmente dá para resolver — às vezes com uma ' +
+      'automação simples, sem sistema nenhum.'
+  },
+  {
+    question: 'E se o que eu preciso não estiver na lista?',
+    answer:
+      'O catálogo cobre o que aparece com mais frequência, não o limite do que dá para fazer. ' +
+      'Projetos que não se encaixam em um formato pronto são justamente os que mais rendem — ' +
+      'é só me contar o problema.'
+  }
 ];
 
 export default function Services() {
@@ -198,6 +236,34 @@ export default function Services() {
             Conversar sobre o meu caso <ArrowRight size={18} />
           </a>
         </div>
+      </section>
+
+      <section className="section-padding services-guarantees-section">
+        <SectionTitle
+          eyebrow="Segurança para contratar"
+          title="O que vale para qualquer projeto desta página"
+          text="Não importa se é uma landing page ou um sistema com painel: as mesmas garantias valem."
+        />
+
+        <div className="about-guarantees-grid">
+          {guarantees.map(([Icon, title, text]) => (
+            <Reveal className="about-guarantee-card" key={title}>
+              <Icon size={26} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-padding services-faq-section">
+        <SectionTitle
+          eyebrow="Dúvidas frequentes"
+          title="Antes de escolher o que pedir"
+          text="Preço, prazo e garantia estão respondidos na página inicial. Aqui ficam as dúvidas de quem ainda está decidindo o caminho."
+        />
+
+        <Faq items={faqServicos} />
       </section>
 
       <section className="section-padding services-process-section">

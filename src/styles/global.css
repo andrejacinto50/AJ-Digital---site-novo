@@ -6672,3 +6672,75 @@ html.aj-mobile .about-visual-panel {
     padding: 24px 22px !important;
   }
 }
+
+/* ==========================================================================
+   CONTATO: O QUE ACONTECE DEPOIS DE ENVIAR
+   ========================================================================== */
+
+.contact-next-steps {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--glass);
+}
+
+.contact-next-label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.contact-next-steps ol {
+  counter-reset: passo;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-next-steps li {
+  position: relative;
+  padding-left: 42px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.contact-next-steps li::before {
+  counter-increment: passo;
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(212, 175, 55, .4);
+  border-radius: 50%;
+  color: var(--gold-2);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.contact-next-steps strong {
+  color: var(--white);
+}
+
+.contact-form-intro .project-guarantee-strip {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  html.aj-mobile .contact-next-steps {
+    padding: 22px 20px !important;
+  }
+}

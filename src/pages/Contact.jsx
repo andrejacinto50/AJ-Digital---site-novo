@@ -13,6 +13,8 @@ import Seo from '../components/Seo.jsx';
 import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import ContactForm from '../components/ContactForm.jsx';
+import SectionTitle from '../components/SectionTitle.jsx';
+import { guarantees, guaranteesStrip } from '../data/guarantees.js';
 
 export default function Contact() {
   return (
@@ -75,10 +77,37 @@ export default function Contact() {
             Preencha os campos e a conversa abre no WhatsApp com tudo já escrito.
             Sem formulário perdido, sem espera: você só aperta enviar.
           </p>
+
+          <ul className="project-guarantee-strip">
+            {guaranteesStrip.map(([Icon, label]) => (
+              <li key={label}>
+                <Icon size={16} /> {label}
+              </li>
+            ))}
+          </ul>
         </Reveal>
 
         <Reveal>
           <ContactForm />
+        </Reveal>
+
+        <Reveal className="contact-next-steps">
+          <span className="contact-next-label">O que acontece depois</span>
+
+          <ol>
+            <li>
+              <strong>A conversa começa explicada.</strong> Sua mensagem chega com nome, empresa,
+              tipo de projeto e o que você precisa — não do zero.
+            </li>
+            <li>
+              <strong>Eu leio e respondo.</strong> Se faltar alguma informação, pergunto ali
+              mesmo. Se já der para orçar, orço.
+            </li>
+            <li>
+              <strong>Se fizer sentido, vira proposta.</strong> Com escopo, prazo e valor por
+              escrito — e contrato antes de qualquer coisa começar.
+            </li>
+          </ol>
         </Reveal>
       </section>
 
@@ -163,6 +192,24 @@ export default function Contact() {
             <MessageCircle size={28} />
             <span>Automações e WhatsApp</span>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section-padding contact-guarantees-section">
+        <SectionTitle
+          eyebrow="Antes de você chamar"
+          title="O que já está garantido"
+          text="Contratar desenvolvimento gera dúvida, e é justo. Por isso o que está incluído fica escrito aqui, não só combinado na conversa."
+        />
+
+        <div className="about-guarantees-grid">
+          {guarantees.map(([Icon, title, text]) => (
+            <Reveal className="about-guarantee-card" key={title}>
+              <Icon size={26} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
 
