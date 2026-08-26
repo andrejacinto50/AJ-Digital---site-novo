@@ -20,6 +20,19 @@ export const faqItems = [
       'informações e materiais da empresa são enviados.'
   },
   {
+    question: 'Tem contrato?',
+    answer:
+      'Tem. A proposta descreve o que será desenvolvido, o prazo e o valor, e o contrato é ' +
+      'assinado antes do projeto começar. O pagamento só acontece depois disso.'
+  },
+  {
+    question: 'Consigo ver alguma coisa antes de fechar?',
+    answer:
+      'Quando ajuda a decidir, apresento um esboço ou uma prévia antes do projeto completo — ' +
+      'assim você enxerga a ideia em vez de imaginar. E durante o desenvolvimento você avalia ' +
+      'o projeto antes de ele ir ao ar.'
+  },
+  {
     question: 'Tem garantia depois da entrega?',
     answer:
       'Sim. Cada projeto conta com 12 meses de garantia para correções relacionadas ao ' +

@@ -379,6 +379,10 @@ p {
 .hero {
   position: relative;
   min-height: calc(100vh - 82px);
+  /* O respiro de 110px das outras secoes empurrava os botoes para baixo da
+     dobra em notebook de 768px de altura. */
+  padding-top: 48px;
+  padding-bottom: 48px;
   display: grid;
   grid-template-columns: .95fr 1.05fr;
   align-items: center;
@@ -433,6 +437,12 @@ p {
   max-width: 780px;
   color: #fff;
   text-wrap: balance;
+  /* O titulo do hero e longo (quatro frentes + o problema). Com a escala
+     global de h1 ele passava de sete linhas na coluna estreita do hero. */
+  font-size: clamp(2.2rem, 3.4vw, 3.5rem);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  margin-bottom: 20px;
 }
 
 .hero-copy p {
@@ -5804,7 +5814,7 @@ html.aj-mobile .whatsapp-float {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 18px;
-  margin: 0 0 26px;
+  margin: 0 0 22px;
   padding: 0;
 }
 
@@ -6362,33 +6372,6 @@ html.aj-mobile .about-visual-panel {
   color: var(--gold-2);
 }
 
-/* Frase de posicionamento */
-.positioning-claim {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 14px;
-  margin: 0 0 16px;
-  padding: 0;
-  list-style: none;
-  color: var(--gold-2);
-  font-size: clamp(15px, 3.6vw, 19px);
-  font-weight: 900;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
-.positioning-claim li::after {
-  content: "•";
-  margin-left: 14px;
-  color: rgba(212, 175, 55, .5);
-}
-
-.positioning-claim li:last-child::after {
-  content: "";
-  margin: 0;
-}
-
 @media (min-width: 760px) {
   .catalog-items {
     grid-template-columns: 1fr 1fr;
@@ -6618,6 +6601,74 @@ html.aj-mobile .about-visual-panel {
 @media (max-width: 768px) {
   html.aj-mobile .process-step-card,
   html.aj-mobile .process-material-card {
+    padding: 24px 22px !important;
+  }
+}
+
+/* ==========================================================================
+   INICIO: BLOCO DE DORES
+   Cada card mostra a dor e, no rodape, a frente que resolve.
+   ========================================================================== */
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.pain-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+  transition: .25s ease;
+}
+
+.pain-card:hover {
+  border-color: rgba(212, 175, 55, .45);
+  transform: translateY(-4px);
+}
+
+.pain-card > svg {
+  color: var(--gold);
+}
+
+.pain-card h3 {
+  margin: 8px 0 0;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.pain-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.pain-solution {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--gold-2);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.pain-solution svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  html.aj-mobile .pain-card {
     padding: 24px 22px !important;
   }
 }

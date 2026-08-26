@@ -2,17 +2,13 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Check,
-  BadgeCheck,
   CalendarClock,
-  Code2,
-  Handshake,
+  ClipboardList,
+  FileSignature,
+  FileSpreadsheet,
   MessageCircle,
-  MonitorSmartphone,
   ShieldCheck,
-  Smartphone,
-  TrendingUp,
-  Wrench,
-  Zap
+  TrendingUp
 } from 'lucide-react';
 
 import PageTransition from '../components/PageTransition.jsx';
@@ -50,54 +46,46 @@ const orderedProjects = projectOrder
 const featuredProject = orderedProjects[0];
 const otherProjects = orderedProjects.slice(1);
 
-const benefits = [
-  [
-    BadgeCheck,
-    'Mais profissionalismo',
-    'Sua empresa transmite mais confiança com uma presença digital moderna, organizada e estratégica.'
-  ],
-  [
-    Smartphone,
-    'Pensado para celular',
-    'A maior parte dos seus clientes acessa pelo smartphone. Por isso cada detalhe começa pelo mobile.'
-  ],
+/**
+ * Dores concretas no lugar de benefícios genéricos: quem se reconhece em uma
+ * delas entende sozinho o que precisa. Cada dor aponta para a frente que resolve.
+ */
+const dores = [
   [
     MessageCircle,
-    'WhatsApp integrado',
-    'O cliente entende sua empresa, chama no WhatsApp e é atendido de forma mais rápida e organizada.'
+    '"Quanto custa?" no direct, cinco vezes por dia',
+    'Você repete a mesma resposta e ainda precisa perguntar tudo antes de orçar.',
+    'Site com a informação certa e formulário que chega organizado no WhatsApp'
   ],
   [
-    Zap,
-    'Mais produtividade',
-    'Automatizamos tarefas repetitivas para sua empresa ganhar tempo e melhorar o atendimento.'
+    CalendarClock,
+    'Agenda no caderno e cliente ligando para confirmar',
+    'Horário marcado por mensagem, remarcado por mensagem e esquecido do mesmo jeito.',
+    'Sistema de agendamento com confirmação automática'
+  ],
+  [
+    FileSpreadsheet,
+    'A planilha que só uma pessoa da equipe entende',
+    'Quando essa pessoa falta, ninguém acha a informação — e nada anda.',
+    'Painel administrativo, com tudo em um lugar só'
+  ],
+  [
+    ClipboardList,
+    'Pedido anotado no papel e passado a limpo depois',
+    'O mesmo dado digitado duas, três vezes, e sempre com risco de erro.',
+    'Automação do processo, do pedido até o registro'
   ]
 ];
 
+/** Resumo das sete etapas do processo, agrupadas em quatro momentos. */
 const comoFunciona = [
-  ['01', 'Conversa', 'Você conta o que precisa. Entendo a empresa, a rotina e o objetivo do projeto.'],
-  ['02', 'Proposta', 'Defino a melhor solução e apresento o orçamento, sem compromisso.'],
-  ['03', 'Desenvolvimento', 'Crio o projeto e acompanho você durante as etapas, com ajustes no caminho.'],
-  ['04', 'No ar', 'Publico, configuro tudo e o projeto entra em funcionamento com garantia.']
+  ['01', 'Conversa', 'Você conta o que precisa. Entendo a empresa, a rotina e onde se perde tempo hoje.'],
+  ['02', 'Proposta e contrato', 'Defino o que faz sentido desenvolver, com prazo e valor. Contrato assinado antes de começar.'],
+  ['03', 'Desenvolvimento e apresentação', 'Construo o projeto e você avalia antes de ir ao ar — nada de surpresa no final.'],
+  ['04', 'No ar, com acompanhamento', 'Publico e configuro tudo. Depois seguem 3 meses de acompanhamento e 12 meses de garantia.']
 ];
 
 
-const appExperienceHighlights = [
-  [
-    Smartphone,
-    'Experiência de aplicativo',
-    'Sites mobile first, rápidos e com navegação fluida para o cliente sentir que está usando um app.'
-  ],
-  [
-    MonitorSmartphone,
-    'Visual perfeito no celular',
-    'Cada seção é pensada para telas menores, com botões estratégicos, leitura fácil e contato rápido.'
-  ],
-  [
-    Code2,
-    'Possibilidade de virar app',
-    'Para empresas que querem ir além, também é possível transformar o projeto em aplicativo Android e iOS.'
-  ]
-];
 
 export default function Home() {
   return (
@@ -112,15 +100,8 @@ export default function Home() {
         <Reveal className="hero-copy">
           <span className="eyebrow">AJ Digital • Atendemos todo o Brasil</span>
 
-          <ul className="positioning-claim">
-            <li>Sites</li>
-            <li>Sistemas</li>
-            <li>Aplicativos</li>
-            <li>Automações</li>
-          </ul>
-
           <h1>
-            Automatizamos processos e criamos soluções digitais para empresas.
+            Sites, sistemas, aplicativos e automações para sua empresa parar de fazer no manual.
           </h1>
 
           <p>{positioning.description}</p>
@@ -133,7 +114,7 @@ export default function Home() {
               <CalendarClock size={15} /> Entrega em 7 a 15 dias
             </li>
             <li>
-              <MessageCircle size={15} /> Atendimento direto com quem desenvolve
+              <FileSignature size={15} /> Contrato antes de começar
             </li>
           </ul>
 
@@ -148,26 +129,10 @@ export default function Home() {
             </a>
 
             <a className="secondary-btn" href="/portfolio">
-              Ver projetos criados
+              Ver os modelos
             </a>
           </div>
 
-          <div className="hero-trust hero-trust-cards">
-            <span>
-              <strong>Sites profissionais</strong>
-              <small>Presença digital moderna para valorizar sua marca</small>
-            </span>
-
-            <span>
-              <strong>Automações inteligentes</strong>
-              <small>Processos mais rápidos, organizados e eficientes</small>
-            </span>
-
-            <span>
-              <strong>Atendimento facilitado</strong>
-              <small>Estrutura pensada para gerar contatos e economizar tempo</small>
-            </span>
-          </div>
         </Reveal>
 
         <Reveal delay={0.15} className="hero-visual">
@@ -243,19 +208,19 @@ export default function Home() {
             <span className="eyebrow">O que a AJ Digital faz</span>
 
             <h2>
-              Sua empresa pode ter site, aplicativo e automações trabalhando juntos.
+              Quatro frentes, um objetivo: resolver o problema da sua empresa.
             </h2>
 
             <p>
-              Hoje a AJ Digital desenvolve soluções digitais que vão além de um site bonito.
-              Criamos estruturas para melhorar a presença online, facilitar o atendimento e
-              automatizar tarefas que tomam tempo no dia a dia da empresa.
+              Antes de falar em site, eu entendo como a empresa funciona: como o cliente chega,
+              como acontece o atendimento e o que ainda é feito na mão. Só depois disso a gente
+              decide o que desenvolver.
             </p>
 
             <p>
-              Dependendo da necessidade do negócio, o projeto pode envolver site profissional,
-              experiência mobile parecida com aplicativo, aplicativo Android e iOS, integração
-              com WhatsApp, formulários, sistemas internos e automações inteligentes.
+              Site para apresentar, sistema para organizar a operação, automação para eliminar o
+              repetitivo e experiência mobile para atender onde o seu cliente está. Muitas vezes,
+              uma combinação deles.
             </p>
 
             <a
@@ -299,77 +264,6 @@ export default function Home() {
           </Reveal>
         </div>
 
-        <div className="app-experience-grid">
-          {appExperienceHighlights.map(([Icon, title, text]) => (
-            <Reveal className="app-experience-card" key={title}>
-              <Icon size={26} />
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-padding portfolio-premium-section">
-        <SectionTitle
-          eyebrow="Portfólio"
-          title="Modelos criados para diferentes segmentos"
-          text="Demonstrações navegáveis que mostram o padrão de entrega: visual, velocidade e integração com WhatsApp. Projetos de clientes entram aqui conforme forem publicados."
-        />
-
-        <div className="premium-portfolio-layout">
-          {featuredProject && (
-            <Reveal className="featured-project-wrap">
-              <div className="featured-project-label">
-                <span>Projeto em destaque</span>
-                <strong>Loja Premium com foco em WhatsApp</strong>
-              </div>
-
-              <ProjectCard project={featuredProject} priority />
-            </Reveal>
-          )}
-
-          <div className="side-projects-grid">
-            {otherProjects.map((project) => (
-              <Reveal key={project.slug}>
-                <ProjectCard project={project} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
-        <div className="section-more only-mobile">
-          <Link className="secondary-btn" to="/portfolio">
-            Ver os 6 modelos <ArrowRight size={17} />
-          </Link>
-        </div>
-      </section>
-
-      <section className="section-padding why-section">
-        <SectionTitle
-          eyebrow="Por que investir"
-          title="Sua empresa precisa de tecnologia para atrair clientes, economizar tempo e organizar processos"
-          text="Um site profissional melhora a percepção da sua marca. Combinado com WhatsApp, sistemas e automações, sua empresa passa a trabalhar de forma mais rápida e eficiente."
-        />
-
-        <div className="service-grid">
-          {benefits.map(([Icon, title, text]) => (
-            <Reveal className="service-card" key={title}>
-              <Icon size={28} />
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-padding services-section">
-        <SectionTitle
-          eyebrow="O que desenvolvemos"
-          title="Quatro frentes, um objetivo: resolver o problema da sua empresa"
-          text="Site para apresentar, sistema para organizar, automação para eliminar o repetitivo e experiência mobile para atender onde o seu cliente está."
-        />
-
         <div className="catalog-preview-grid">
           {catalog.map(({ id, icon: Icon, title, summary, destaques }) => (
             <Reveal className="catalog-preview-card" key={id}>
@@ -396,11 +290,69 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-padding portfolio-premium-section">
+        <SectionTitle
+          eyebrow="Portfólio"
+          title="Modelos criados para diferentes segmentos"
+          text="Demonstrações navegáveis que mostram o padrão de entrega: visual, velocidade e integração com WhatsApp. Projetos de clientes entram aqui conforme forem publicados."
+        />
+
+        <div className="premium-portfolio-layout">
+          {featuredProject && (
+            <Reveal className="featured-project-wrap">
+              <div className="featured-project-label">
+                <span>Modelo em destaque</span>
+                <strong>{featuredProject.searchTitle || featuredProject.title}</strong>
+              </div>
+
+              <ProjectCard project={featuredProject} priority />
+            </Reveal>
+          )}
+
+          <div className="side-projects-grid">
+            {otherProjects.map((project) => (
+              <Reveal key={project.slug}>
+                <ProjectCard project={project} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <div className="section-more only-mobile">
+          <Link className="secondary-btn" to="/portfolio">
+            Ver os 6 modelos <ArrowRight size={17} />
+          </Link>
+        </div>
+      </section>
+
+      <section className="section-padding why-section">
+        <SectionTitle
+          eyebrow="Onde a tecnologia entra"
+          title="Você reconhece algum desses?"
+          text="Nenhum deles é problema de falta de esforço. São processos que ninguém parou para arrumar — e é exatamente aí que a tecnologia resolve."
+        />
+
+        <div className="pain-grid">
+          {dores.map(([Icon, dor, detalhe, solucao]) => (
+            <Reveal className="pain-card" key={dor}>
+              <Icon size={26} />
+
+              <h3>{dor}</h3>
+              <p>{detalhe}</p>
+
+              <span className="pain-solution">
+                <ArrowRight size={15} /> {solucao}
+              </span>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       <section className="section-padding how-section">
         <SectionTitle
           eyebrow="Como funciona"
           title="Do primeiro contato no WhatsApp até o projeto no ar"
-          text="Sem burocracia e sem termo técnico. Você acompanha cada etapa e fala sempre com a mesma pessoa."
+          text="São sete etapas, resumidas aqui em quatro momentos. Sem burocracia e sem termo técnico: você acompanha cada uma e fala sempre com a mesma pessoa."
         />
 
         <div className="about-process-grid">
@@ -415,7 +367,7 @@ export default function Home() {
 
         <Reveal className="how-section-link">
           <Link className="secondary-btn" to="/processo">
-            Ver o processo completo <ArrowRight size={17} />
+            Ver as sete etapas <ArrowRight size={17} />
           </Link>
         </Reveal>
       </section>

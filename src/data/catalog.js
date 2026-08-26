@@ -10,7 +10,6 @@ import { Bot, Globe2, MonitorCog, Smartphone } from 'lucide-react';
  * aparecem só na página de Serviços.
  */
 export const positioning = {
-  claim: 'Sites • Sistemas • Aplicativos • Automações',
   description:
     'Desenvolvemos soluções digitais sob medida para apresentar sua empresa, ' +
     'organizar processos e automatizar tarefas do dia a dia.'
