@@ -1,4 +1,6 @@
-import { ArrowRight, CalendarClock, Handshake, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+import { guaranteesStrip } from '../data/guarantees.js';
 
 export default function CTA() {
   return (
@@ -12,15 +14,11 @@ export default function CTA() {
       </a>
 
       <ul className="cta-guarantees">
-        <li>
-          <ShieldCheck size={16} /> 12 meses de garantia
-        </li>
-        <li>
-          <Handshake size={16} /> 3 meses de acompanhamento
-        </li>
-        <li>
-          <CalendarClock size={16} /> Entrega em 7 a 15 dias
-        </li>
+        {guaranteesStrip.map(([Icon, label]) => (
+          <li key={label}>
+            <Icon size={16} /> {label}
+          </li>
+        ))}
       </ul>
     </section>
   );

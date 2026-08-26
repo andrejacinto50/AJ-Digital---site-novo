@@ -56,10 +56,10 @@ export const pageSeo = {
   },
 
   process: {
-    title: 'Como trabalhamos | Processo de projeto da AJ Digital',
+    title: 'Como funciona um projeto | Processo da AJ Digital',
     description:
-      'Diagnóstico, planejamento, desenvolvimento e implantação: as quatro etapas de um ' +
-      'projeto AJ Digital, do primeiro contato até a solução publicada e funcionando.',
+      'As sete etapas de um projeto, do primeiro contato até a publicação: entendimento, ' +
+      'proposta, planejamento, desenvolvimento, testes, entrega e acompanhamento.',
     path: '/processo'
   },
 
@@ -79,11 +79,16 @@ export const pageSeo = {
   }
 };
 
-/** Meta da página de detalhe de um projeto do portfólio. */
+/**
+ * Meta da página de detalhe de um projeto do portfólio.
+ *
+ * O título usa o `searchTitle` — o que o cliente digita na busca — e não o nome
+ * interno do modelo, que ninguém procura.
+ */
 export function projectSeo(project) {
   return {
-    title: `${project.title} | Portfólio AJ Digital`,
-    description: project.description,
+    title: `${project.searchTitle || project.title} | AJ Digital`,
+    description: project.searchDescription || project.description,
     path: `/portfolio/${project.slug}`,
     // OG usa o PNG: alguns leitores de preview (WhatsApp incluso) ainda
     // ignoram WebP.

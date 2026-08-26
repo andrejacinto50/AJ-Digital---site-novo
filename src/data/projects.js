@@ -7,11 +7,40 @@ export const projects = [
     kind: 'modelo',
     image: '/lojapremium.webp',
     link: 'https://lojapremium.netlify.app/',
+    searchTitle: 'Site para loja com catálogo e pedidos pelo WhatsApp',
+
+    searchDescription:
+      'Modelo de site para lojas que querem vender pelo WhatsApp sem montar um e-commerce: catálogo organizado, página de produto, painel para cadastrar os itens e pedido direto na conversa.',
+
+    related: ['monarch-store'],
+
+    faq: [
+      {
+        question: 'Qual a diferença para uma loja virtual completa?',
+        answer:
+          'Aqui o cliente escolhe o produto e o pedido vai para o WhatsApp — não existe carrinho nem pagamento no site. Se você precisa receber o pagamento online, o caminho é o e-commerce.'
+      },
+      {
+        question: 'Eu mesmo consigo cadastrar os produtos?',
+        answer:
+          'Sim. O modelo prevê painel administrativo para produtos, categorias, banners e para ativar ou desativar um item, sem depender de mim para cada alteração.'
+      },
+      {
+        question: 'Serve para quem hoje vende só pelo Instagram?',
+        answer:
+          'É exatamente o caso. O catálogo organizado substitui o "chama no direct" e o print da tabela de preço, e o cliente chega na conversa já sabendo o que quer.'
+      },
+      {
+        question: 'Tem limite de produtos?',
+        answer:
+          'Não há um limite fixo. O que muda com um catálogo grande é a organização — categorias e busca — e isso a gente define no início do projeto.'
+      }
+    ],
     gradient: 'gold',
     featured: true,
 
     description:
-      'Modelo premium para lojas que querem começar a vender online com uma estrutura profissional, moderna e conectada ao WhatsApp.',
+      'Site para lojas que querem vender pelo WhatsApp sem montar um e-commerce completo: catálogo organizado, página de produto e pedido direto na conversa.',
 
     longDescription:
       'A Loja Premium WhatsApp foi criada para empresas que querem vender online sem precisar começar com um e-commerce complexo. O cliente acessa o catálogo, visualiza produtos, categorias, detalhes, preços e chama diretamente no WhatsApp para finalizar a compra. É uma solução com ótimo custo-benefício para lojas que querem sair do improviso e apresentar seus produtos com mais profissionalismo.',
@@ -114,10 +143,39 @@ export const projects = [
     kind: 'modelo',
     image: '/academia.webp',
     link: 'https://academiapremium.netlify.app/',
+    searchTitle: 'Site para academia com planos e modalidades',
+
+    searchDescription:
+      'Modelo de site para academias e estúdios apresentarem planos, modalidades, estrutura e horários, com contato direto para quem está decidindo onde treinar.',
+
+    related: [],
+
+    faq: [
+      {
+        question: 'Dá para mostrar o valor dos planos no site?',
+        answer:
+          'Dá, e costuma melhorar a qualidade do contato: quem chama já sabe o preço. Se preferir não expor, dá para trabalhar com "a partir de" ou só com o benefício.'
+      },
+      {
+        question: 'É possível vender o plano online?',
+        answer:
+          'Neste modelo, não. Venda com pagamento é uma loja virtual ou integração com o sistema de gestão da academia — projeto diferente, que também desenvolvo.'
+      },
+      {
+        question: 'Consigo trocar horários e modalidades sozinho?',
+        answer:
+          'Com painel administrativo, sim. É um adicional que a gente combina no início, conforme a frequência com que essas informações mudam.'
+      },
+      {
+        question: 'Serve para estúdio pequeno ou personal trainer?',
+        answer:
+          'Serve. Muda a quantidade de seções e o tom das fotos, não a estrutura do site.'
+      }
+    ],
     gradient: 'gold',
 
     description:
-      'Modelo premium para academias que querem transmitir estrutura, profissionalismo, energia e atrair novos alunos pelo digital.',
+      'Site para academias e estúdios apresentarem planos, modalidades, estrutura e horários — com contato direto para quem está decidindo onde treinar.',
 
     longDescription:
       'O modelo Academia Premium foi desenvolvido para academias, centros de treinamento e espaços fitness que querem se posicionar com mais autoridade. O projeto apresenta a estrutura, modalidades, planos, diferenciais, resultados e contato pelo WhatsApp em uma experiência visual forte, moderna e totalmente responsiva.',
@@ -218,10 +276,39 @@ export const projects = [
     kind: 'modelo',
     image: '/barbearia.webp',
     link: 'https://barbeariamonarch.netlify.app/',
+    searchTitle: 'Site para barbearia com agendamento pelo WhatsApp',
+
+    searchDescription:
+      'Modelo de site de uma página para barbearias: serviços, ambiente, galeria e um caminho curto do visitante até o agendamento pelo WhatsApp.',
+
+    related: ['barbearia-premium-multipagina'],
+
+    faq: [
+      {
+        question: 'O cliente consegue agendar pelo site?',
+        answer:
+          'O modelo leva o cliente ao WhatsApp com a mensagem pronta. Se você quiser agenda de verdade — horários, profissional e confirmação automática — isso é um sistema de agendamento, que desenvolvo como projeto à parte.'
+      },
+      {
+        question: 'Qual a diferença para o modelo multipágina?',
+        answer:
+          'Este é uma página só, direto ao ponto. O multipágina tem páginas separadas para equipe, serviços e galeria, e compensa quando há mais coisa para apresentar.'
+      },
+      {
+        question: 'Funciona para barbearia com mais de um profissional?',
+        answer:
+          'Funciona. Mas se cada barbeiro tem a própria agenda, o WhatsApp começa a atrapalhar em vez de ajudar — aí o sistema de agendamento passa a fazer sentido.'
+      },
+      {
+        question: 'Preciso de fotos profissionais?',
+        answer:
+          'Ajuda bastante: a galeria é o que mais impressiona nesse segmento. Foto de celular com boa luz resolve no começo, e dá para trocar depois.'
+      }
+    ],
     gradient: 'dark',
 
     description:
-      'Site elegante para barbearias que querem valorizar seus serviços, fortalecer a marca e facilitar agendamentos.',
+      'Site de uma página para barbearias: serviços, ambiente, galeria e um caminho curto do visitante até o agendamento pelo WhatsApp.',
 
     longDescription:
       'A Barbearia Monarch foi criada para barbearias que querem transmitir sofisticação, confiança e profissionalismo. O modelo apresenta serviços, diferenciais, ambiente, galeria e chamada direta para agendamento pelo WhatsApp, criando uma percepção mais premium para o cliente antes mesmo da visita.',
@@ -320,10 +407,39 @@ export const projects = [
     kind: 'modelo',
     image: '/restaurante.webp',
     link: 'https://restaurantemultipage.netlify.app/',
+    searchTitle: 'Site para restaurante com cardápio digital',
+
+    searchDescription:
+      'Modelo de site para restaurantes apresentarem cardápio, ambiente e história, com reserva e contato pelo WhatsApp e um cardápio que se atualiza sem reimprimir nada.',
+
+    related: [],
+
+    faq: [
+      {
+        question: 'O cardápio é um PDF?',
+        answer:
+          'Não. É uma página que abre rápido no celular e pode ser atualizada quando o preço muda. PDF no celular obriga a pessoa a dar zoom e costuma afastar cliente.'
+      },
+      {
+        question: 'Dá para receber pedido de delivery pelo site?',
+        answer:
+          'Este modelo direciona para o WhatsApp. Pedido com carrinho e pagamento é outra estrutura, mais próxima de uma loja virtual.'
+      },
+      {
+        question: 'Consigo trocar o preço de um prato sozinho?',
+        answer:
+          'Com painel administrativo, sim. Sem ele, alterações pontuais entram no Programa de Acompanhamento dos primeiros meses.'
+      },
+      {
+        question: 'Dá para usar QR Code na mesa?',
+        answer:
+          'Dá. O cardápio tem endereço próprio, então o QR Code aponta direto para ele — e continua funcionando mesmo quando você atualiza os pratos.'
+      }
+    ],
     gradient: 'dark',
 
     description:
-      'Experiência digital completa para restaurantes apresentarem cardápio, ambiente, história e contato pelo WhatsApp.',
+      'Site para restaurantes apresentarem cardápio, ambiente e história, com reserva e contato pelo WhatsApp — e um cardápio que se atualiza sem reimprimir nada.',
 
     longDescription:
       'O Restaurante Multipage foi desenvolvido para negócios gastronômicos que querem uma apresentação digital completa. O projeto mostra cardápio, pratos, ambiente, história, diferenciais e canais de contato em múltiplas páginas, criando desejo e facilitando reservas ou pedidos pelo WhatsApp.',
@@ -424,10 +540,39 @@ export const projects = [
     kind: 'modelo',
     image: '/loja.webp',
     link: 'https://monarchstore.netlify.app/',
+    searchTitle: 'Loja virtual completa com carrinho e página de produto',
+
+    searchDescription:
+      'Modelo de loja virtual para marcas que querem vender online de ponta a ponta: carrinho, página de produto, pedidos e uma experiência de compra profissional.',
+
+    related: ['loja-premium-whatsapp'],
+
+    faq: [
+      {
+        question: 'Qual a diferença para o catálogo com WhatsApp?',
+        answer:
+          'Aqui existe carrinho e fluxo de compra dentro do site. No catálogo, o pedido termina na conversa. A loja virtual dá mais autonomia ao cliente e exige mais configuração de sua parte.'
+      },
+      {
+        question: 'Aceita pagamento online?',
+        answer:
+          'A estrutura é preparada para integrar meio de pagamento. A escolha do provedor e as taxas ficam com você; a integração é comigo.'
+      },
+      {
+        question: 'Preciso ter um catálogo grande?',
+        answer:
+          'Não. Funciona com poucos produtos. O que define a escolha é como você quer vender, não o tamanho do estoque.'
+      },
+      {
+        question: 'Dá para começar no catálogo e migrar depois?',
+        answer:
+          'Dá, e é o caminho mais comum: começa vendendo pelo WhatsApp e migra quando o volume de pedidos justifica a loja completa.'
+      }
+    ],
     gradient: 'gold',
 
     description:
-      'Loja virtual completa para marcas que desejam vender produtos online com uma experiência moderna e profissional.',
+      'Loja virtual para marcas que querem vender online de ponta a ponta: carrinho, página de produto, pedidos e uma experiência de compra profissional.',
 
     longDescription:
       'A Monarch Store é um modelo de e-commerce premium criado para marcas que desejam vender online com uma estrutura mais completa. O projeto conta com vitrine de produtos, página individual, carrinho de compras e uma experiência visual moderna, transmitindo mais valor para a marca.',
@@ -525,10 +670,39 @@ export const projects = [
     kind: 'modelo',
     image: '/barbeariapremium.webp',
     link: 'https://barbeariapremiummultipagina.netlify.app/',
+    searchTitle: 'Site multipágina para barbearia com equipe e galeria',
+
+    searchDescription:
+      'Modelo com páginas separadas para barbearias que têm equipe, vários serviços e trabalho para mostrar: apresentação, serviços, galeria e contato.',
+
+    related: ['barbearia-monarch'],
+
+    faq: [
+      {
+        question: 'Quando vale mais que o site de uma página?',
+        answer:
+          'Quando você tem equipe, muitos serviços ou uma galeria grande. Colocar tudo isso em uma página só deixa a rolagem longa demais e o cliente desiste no meio.'
+      },
+      {
+        question: 'Ter páginas separadas ajuda no Google?',
+        answer:
+          'Ajuda: cada página pode responder a uma busca diferente, como "barbearia com barboterapia" ou "corte infantil". Uma página única disputa tudo de uma vez.'
+      },
+      {
+        question: 'Dá para começar simples e crescer depois?',
+        answer:
+          'Dá. Começa com o modelo de uma página e migra para o multipágina quando a barbearia tiver mais para mostrar — a estrutura por trás é a mesma.'
+      },
+      {
+        question: 'Tem agendamento automático?',
+        answer:
+          'O contato vai para o WhatsApp com a mensagem pronta. Agenda com horário, profissional e confirmação automática é um sistema de agendamento, à parte.'
+      }
+    ],
     gradient: 'dark',
 
     description:
-      'Modelo premium multipágina para barbearias que querem apresentar equipe, serviços, galeria e diferenciais com alto nível profissional.',
+      'Site com páginas separadas para barbearias que têm equipe, vários serviços e trabalho para mostrar: apresentação, serviços, galeria e contato.',
 
     longDescription:
       'A Barbearia Premium Multipágina é uma versão mais completa para barbearias que querem uma presença digital robusta. O projeto apresenta páginas específicas para serviços, equipe, galeria, depoimentos, contato e diferenciais da marca, criando uma experiência muito mais completa para o cliente.',

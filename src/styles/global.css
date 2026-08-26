@@ -6068,7 +6068,8 @@ html.aj-mobile .whatsapp-float {
    texto abaixo de ~12,5px.
    ========================================================================== */
 
-html.aj-mobile .text-link {
+html.aj-mobile .text-link,
+html.aj-mobile .back-link {
   min-height: 44px;
   align-items: center;
 }
@@ -6414,6 +6415,209 @@ html.aj-mobile .about-visual-panel {
   }
 
   html.aj-mobile .catalog-preview-card {
+    padding: 24px 22px !important;
+  }
+}
+
+/* ==========================================================================
+   PAGINA DE PROJETO: NOME DO MODELO, RELACIONADOS E GARANTIAS
+   ========================================================================== */
+
+.project-model-name {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.project-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--glass);
+  transition: .25s ease;
+}
+
+.project-related-card:hover {
+  border-color: rgba(212, 175, 55, .45);
+  transform: translateY(-4px);
+}
+
+.project-related-card h3 {
+  margin: 4px 0 0;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.project-related-card p {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.project-related-card .text-link {
+  margin-top: auto;
+}
+
+.project-guarantee-strip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin: 0 0 26px;
+  padding: 0;
+}
+
+.project-guarantee-strip li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.project-guarantee-strip svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+/* ==========================================================================
+   PROCESSO: SETE ETAPAS, MATERIAIS E O QUE PRECISO DE VOCE
+   A linha decorativa do topo saiu: com sete cards em duas fileiras, ela
+   ligava etapas que nao se seguem.
+   ========================================================================== */
+
+.process-timeline {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.process-timeline::before {
+  display: none;
+}
+
+.process-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.process-step-list {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  margin: 2px 0 0;
+  padding: 0;
+}
+
+.process-step-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.process-step-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.process-step-need {
+  margin-top: auto;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 16px 16px 0;
+  background: rgba(0, 0, 0, .22);
+}
+
+.process-need-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--gold-2);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.process-step-need p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.process-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.process-material-card {
+  padding: 28px 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+  transition: .25s ease;
+}
+
+.process-material-card:hover {
+  border-color: rgba(212, 175, 55, .45);
+  transform: translateY(-4px);
+}
+
+.process-material-card svg {
+  color: var(--gold);
+}
+
+.process-material-card h3 {
+  margin: 14px 0 8px;
+  font-size: 19px;
+}
+
+.process-material-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.process-final-card .project-guarantee-strip {
+  margin-top: 26px;
+}
+
+@media (max-width: 768px) {
+  html.aj-mobile .process-step-card,
+  html.aj-mobile .process-material-card {
     padding: 24px 22px !important;
   }
 }

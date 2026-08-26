@@ -25,6 +25,7 @@ import CTA from '../components/CTA.jsx';
 import Faq from '../components/Faq.jsx';
 import { projects } from '../data/projects.js';
 import { catalog, positioning } from '../data/catalog.js';
+import { guarantees } from '../data/guarantees.js';
 
 const stats = [
   ['6', 'modelos prontos'],
@@ -79,12 +80,6 @@ const comoFunciona = [
   ['04', 'No ar', 'Publico, configuro tudo e o projeto entra em funcionamento com garantia.']
 ];
 
-const garantias = [
-  [ShieldCheck, '12 meses de garantia', 'Correções relacionadas ao desenvolvimento cobertas por um ano após a entrega.'],
-  [Handshake, '3 meses de acompanhamento', 'O Programa de Acompanhamento AJ Digital segue com você nos primeiros meses no ar.'],
-  [CalendarClock, 'Entrega em 7 a 15 dias', 'Prazo normal de um projeto, conforme o tamanho e o retorno das informações.'],
-  [Wrench, 'Publicação inclusa', 'Hospedagem, domínio, DNS e certificado SSL configurados pela AJ Digital.']
-];
 
 const appExperienceHighlights = [
   [
@@ -470,7 +465,7 @@ export default function Home() {
         />
 
         <div className="about-guarantees-grid">
-          {garantias.map(([Icon, title, text]) => (
+          {guarantees.slice(0, 4).map(([Icon, title, text]) => (
             <Reveal className="about-guarantee-card" key={title}>
               <Icon size={26} />
               <h3>{title}</h3>

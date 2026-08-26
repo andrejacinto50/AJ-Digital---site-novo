@@ -19,6 +19,7 @@ import Seo from '../components/Seo.jsx';
 import { pageSeo } from '../data/seo.js';
 import Reveal from '../components/Reveal.jsx';
 import CTA from '../components/CTA.jsx';
+import { guarantees } from '../data/guarantees.js';
 
 const techs = [
   'React',
@@ -85,38 +86,6 @@ const problemas = [
   ]
 ];
 
-const garantias = [
-  [
-    ShieldCheck,
-    '12 meses de garantia',
-    'Correções relacionadas ao desenvolvimento cobertas por um ano inteiro após a entrega.'
-  ],
-  [
-    Handshake,
-    '3 meses de acompanhamento',
-    'O Programa de Acompanhamento AJ Digital segue com você nos primeiros meses do projeto no ar.'
-  ],
-  [
-    CalendarClock,
-    'Entrega em 7 a 15 dias',
-    'É o prazo normal de um projeto, conforme o tamanho e o retorno das informações.'
-  ],
-  [
-    BadgeCheck,
-    'Entrega conforme o combinado',
-    'O que foi acordado na conversa é o que é entregue — sem surpresa no meio do caminho.'
-  ],
-  [
-    Wrench,
-    'Publicação e configuração inclusas',
-    'Hospedagem, domínio, DNS, certificado SSL e publicação. Você recebe o projeto no ar e funcionando.'
-  ],
-  [
-    MessageCircle,
-    'Atendimento com quem desenvolve',
-    'Sem intermediário e sem robô: você fala direto comigo, do primeiro contato à publicação.'
-  ]
-];
 
 const process = [
   ['01', 'Entendimento', 'Conhecemos sua empresa, rotina, processos, público e objetivo principal.'],
@@ -294,7 +263,7 @@ export default function About() {
         </Reveal>
 
         <div className="about-guarantees-grid">
-          {garantias.map(([Icon, title, text]) => (
+          {guarantees.map(([Icon, title, text]) => (
             <Reveal className="about-guarantee-card" key={title}>
               <Icon size={26} />
               <h3>{title}</h3>

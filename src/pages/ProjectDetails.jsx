@@ -19,7 +19,10 @@ import PageTransition from '../components/PageTransition.jsx';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import CTA from '../components/CTA.jsx';
+import Faq from '../components/Faq.jsx';
+import SectionTitle from '../components/SectionTitle.jsx';
 import { projects } from '../data/projects.js';
+import { guaranteesStrip } from '../data/guarantees.js';
 import { pageSeo, projectSeo } from '../data/seo.js';
 
 export default function ProjectDetails() {
@@ -42,6 +45,10 @@ export default function ProjectDetails() {
   }
 
   const isModel = project.kind === 'modelo';
+
+  const relacionados = (project.related || [])
+    .map((slug) => projects.find((item) => item.slug === slug))
+    .filter(Boolean);
 
   const whatsappMessage = encodeURIComponent(project.ctaMessage || `Olá, vi o projeto ${project.title} da AJ Digital e quero algo parecido.`);
   const whatsappLink = `https://wa.me/5548991087702?text=${whatsappMessage}`;
@@ -67,9 +74,11 @@ export default function ProjectDetails() {
                 <FlaskConical size={13} /> Modelo demonstrativo
               </span>
             )}
+
+            <span className="project-model-name">{project.title}</span>
           </div>
 
-          <h1>{project.title}</h1>
+          <h1>{project.searchTitle || project.title}</h1>
 
           <p>{project.description}</p>
 
@@ -300,6 +309,43 @@ export default function ProjectDetails() {
         </div>
       </section>
 
+      {project.faq?.length > 0 && (
+        <section className="section-padding project-faq-section">
+          <SectionTitle
+            eyebrow="Dúvidas desse modelo"
+            title="O que costumam perguntar antes de fechar"
+            text="Preço, prazo e garantia estão respondidos na página inicial. Aqui ficam as dúvidas específicas desse tipo de projeto."
+          />
+
+          <Faq items={project.faq} />
+        </section>
+      )}
+
+      {relacionados.length > 0 && (
+        <section className="section-padding project-related-section">
+          <SectionTitle
+            eyebrow="Modelo parecido"
+            title="Compare antes de decidir"
+            text="Dois caminhos diferentes para necessidades diferentes. Vale abrir os dois."
+          />
+
+          <div className="project-related-grid">
+            {relacionados.map((item) => (
+              <Reveal key={item.slug}>
+                <Link className="project-related-card" to={`/portfolio/${item.slug}`}>
+                  <span className="tag">{item.category}</span>
+                  <h3>{item.searchTitle || item.title}</h3>
+                  <p>{item.description}</p>
+                  <span className="text-link">
+                    Ver esse modelo <ArrowRight size={17} />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="section-padding project-final-cta-section">
         <Reveal className="project-final-cta">
           <span className="eyebrow">Quer algo parecido?</span>
@@ -312,6 +358,14 @@ export default function ProjectDetails() {
             A AJ Digital adapta a estrutura, o visual e a estratégia conforme o seu segmento,
             seu público e o objetivo principal do projeto.
           </p>
+
+          <ul className="project-guarantee-strip">
+            {guaranteesStrip.map(([Icon, label]) => (
+              <li key={label}>
+                <Icon size={16} /> {label}
+              </li>
+            ))}
+          </ul>
 
           <div className="hero-actions">
             <a
