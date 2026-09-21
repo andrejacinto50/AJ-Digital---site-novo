@@ -25,7 +25,7 @@ import { guarantees } from '../data/guarantees.js';
 
 const stats = [
   ['6', 'modelos prontos'],
-  ['7 a 15', 'dias de entrega'],
+  ['7 a 30', 'dias de entrega'],
   ['12 meses', 'de garantia'],
   ['3 meses', 'de acompanhamento']
 ];
@@ -111,7 +111,7 @@ export default function Home() {
               <ShieldCheck size={15} /> 12 meses de garantia
             </li>
             <li>
-              <CalendarClock size={15} /> Entrega em 7 a 15 dias
+              <CalendarClock size={15} /> Entrega em 7 a 30 dias
             </li>
             <li>
               <FileSignature size={15} /> Contrato antes de começar

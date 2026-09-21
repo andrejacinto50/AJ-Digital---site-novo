@@ -94,6 +94,14 @@ const process = [
   ['04', 'Implantação', 'Publicamos, configuramos e deixamos a solução pronta para ajudar sua empresa no dia a dia.']
 ];
 
+/** Piso de cada frente. O valor fechado continua saindo depois da conversa. */
+const precos = [
+  ['Automação', 'a partir de R$ 900'],
+  ['Site', 'a partir de R$ 1.200'],
+  ['Sistema', 'a partir de R$ 2.500'],
+  ['Aplicativo', 'a partir de R$ 15.000']
+];
+
 export default function About() {
   return (
     <PageTransition>
@@ -277,18 +285,27 @@ export default function About() {
         <Reveal className="about-investment-card">
           <span className="eyebrow">Investimento</span>
 
-          <h2>Por que não existe uma tabela de preços aqui</h2>
+          <h2>Onde começa o investimento</h2>
+
+          <ul className="about-price-list">
+            {precos.map(([frente, valor]) => (
+              <li key={frente}>
+                <span className="about-price-label">{frente}</span>
+                <strong>{valor}</strong>
+              </li>
+            ))}
+          </ul>
 
           <p>
-            Cada projeto é diferente do outro e cada um tem sua personalização. Uma loja com
-            catálogo e painel administrativo não custa o mesmo que uma landing page, e um sistema
-            interno não custa o mesmo que um site institucional.
+            O que muda o valor não é o design: é quantas coisas a solução precisa resolver sozinha.
+            Um site que só apresenta a empresa custa menos que um que recebe reserva e pagamento, e
+            um sistema interno não custa o mesmo que uma landing page.
           </p>
 
           <p>
-            Por isso o valor sai depois de entender o que você precisa: o que vai ser desenvolvido,
-            o que o projeto vai ter e o que faz sentido para o momento da sua empresa. A conversa e
-            o orçamento não têm custo nenhum.
+            Por isso o valor fechado sai depois de entender o que você precisa: o que vai ser
+            desenvolvido, o que o projeto vai ter e o que faz sentido para o momento da sua
+            empresa. A conversa e o orçamento não têm custo nenhum.
           </p>
 
           <a

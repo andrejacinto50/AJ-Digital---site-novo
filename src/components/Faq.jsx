@@ -9,15 +9,19 @@ export const faqItems = [
   {
     question: 'Quanto custa um projeto?',
     answer:
-      'Cada projeto é diferente do outro e tem sua personalização, então o valor depende do que ' +
-      'vai ser desenvolvido e do que o projeto vai ter. O orçamento sai depois de entender a sua ' +
-      'necessidade — a conversa não tem custo nenhum.'
+      'Automação a partir de R$ 900. Site a partir de R$ 1.200. Sistema a partir de R$ 2.500. ' +
+      'Aplicativo a partir de R$ 15.000.\n\n' +
+      'O que muda o valor não é o design: é quantas coisas a solução precisa resolver sozinha. ' +
+      'Um site que só apresenta a empresa custa menos que um que recebe reserva e pagamento.\n\n' +
+      'O orçamento fechado sai depois de entender sua necessidade, e a conversa não tem custo ' +
+      'nenhum.'
   },
   {
     question: 'Em quanto tempo o projeto fica pronto?',
     answer:
-      'Normalmente entre 7 e 15 dias, conforme o tamanho do projeto e a rapidez com que as ' +
-      'informações e materiais da empresa são enviados.'
+      'Site fica pronto entre 7 e 15 dias. Sistema ou plataforma com reservas e agendamento ' +
+      'leva até 30. O prazo conta a partir do envio das informações e materiais da empresa — se ' +
+      'o material atrasar, o prazo pausa junto e eu te aviso.'
   },
   {
     question: 'Tem contrato?',
@@ -48,9 +52,8 @@ export const faqItems = [
   {
     question: 'E o domínio, o endereço do site?',
     answer:
-      'O domínio personalizado tem custo de renovação anual. Em alguns projetos e condições ' +
-      'comerciais, o primeiro ano pode ser incluído como benefício; depois desse período a ' +
-      'renovação fica sob responsabilidade do cliente.'
+      'O domínio personalizado está incluso no primeiro ano do projeto. A partir do segundo ' +
+      'ano, a renovação anual fica sob responsabilidade do cliente.'
   },
   {
     question: 'Quem publica e configura tudo?',
@@ -108,7 +111,9 @@ export default function Faq({ items = faqItems }) {
             <ChevronDown size={20} />
           </summary>
 
-          <p>{answer}</p>
+          {answer.split('\n\n').map((paragrafo) => (
+            <p key={paragrafo}>{paragrafo}</p>
+          ))}
         </details>
       ))}
     </div>

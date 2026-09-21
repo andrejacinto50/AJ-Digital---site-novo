@@ -79,6 +79,15 @@ const idealFor = [
  */
 const faqServicos = [
   {
+    question: 'Quanto custa cada uma dessas frentes?',
+    answer:
+      'Automação a partir de R$ 900. Site a partir de R$ 1.200. Sistema a partir de R$ 2.500. ' +
+      'Aplicativo a partir de R$ 15.000.\n\n' +
+      'O que muda o valor dentro de cada frente é quantas coisas a solução precisa resolver ' +
+      'sozinha. O orçamento fechado sai depois de entender sua necessidade, e a conversa não tem ' +
+      'custo nenhum.'
+  },
+  {
     question: 'Não sei o que minha empresa precisa. Isso é problema?',
     answer:
       'Não — é o caso mais comum. Você me conta como a empresa funciona hoje e onde perde tempo, ' +

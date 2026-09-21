@@ -21,7 +21,7 @@ import { projects } from '../data/projects.js';
 
 const portfolioStats = [
   ['6', 'modelos prontos'],
-  ['7 a 15', 'dias de entrega'],
+  ['7 a 30', 'dias de entrega'],
   ['12 meses', 'de garantia'],
   ['3 meses', 'de acompanhamento']
 ];

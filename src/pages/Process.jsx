@@ -106,7 +106,7 @@ const faqProcesso = [
   {
     question: 'Quanto tempo leva do começo ao projeto no ar?',
     answer:
-      'Normalmente entre 7 e 15 dias. O que mais faz variar não é o desenvolvimento: é o tempo até os materiais da empresa chegarem — logo, fotos, textos e a lista de serviços.'
+      'Site fica pronto entre 7 e 15 dias. Sistema ou plataforma com reservas e agendamento leva até 30. O que mais faz variar não é o desenvolvimento: é o tempo até os materiais da empresa chegarem — logo, fotos, textos e a lista de serviços. Se o material atrasar, o prazo pausa junto e eu te aviso.'
   },
   {
     question: 'Tem contrato?',
@@ -142,7 +142,7 @@ export default function Process() {
           </h1>
 
           <p>
-            São sete etapas, do primeiro contato até o projeto no ar — normalmente entre 7 e 15
+            São sete etapas, do primeiro contato até o projeto no ar — normalmente entre 7 e 30
             dias. Em cada uma você sabe o que está acontecendo, o que eu preciso de você e o que
             vem depois. E quem conversa é quem desenvolve.
           </p>
