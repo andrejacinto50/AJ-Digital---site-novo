@@ -48,10 +48,10 @@ export const pageSeo = {
   },
 
   portfolio: {
-    title: 'Portfólio | Modelos de site premium para empresas',
+    title: 'Portfólio | Projetos e modelos de site da AJ Digital',
     description:
-      'Modelos demonstrativos criados pela AJ Digital para lojas, barbearias, restaurantes, ' +
-      'academias e e-commerce. Veja cada projeto funcionando no celular e no computador.',
+      'Projeto de cliente no ar e modelos demonstrativos criados pela AJ Digital para turismo, ' +
+      'lojas, barbearias, restaurantes, academias e e-commerce. Veja cada um funcionando.',
     path: '/portfolio'
   },
 

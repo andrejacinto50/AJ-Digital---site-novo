@@ -43,11 +43,23 @@ export const faqItems = [
       'desenvolvimento e 3 meses do Programa de Acompanhamento AJ Digital.'
   },
   {
+    question: 'Os sites são feitos em WordPress?',
+    answer:
+      'Não. Cada projeto é escrito do zero, sem tema comprado, sem construtor de páginas e sem ' +
+      'plugin de terceiro. Isso significa nenhuma licença para renovar, nenhum plugin para ' +
+      'atualizar e nenhuma brecha herdada de código que não é meu.\n\n' +
+      'Também não existe servidor para você manter: o projeto fica em CDN global, com HTTPS ' +
+      'emitido e renovado automaticamente. Não tem máquina para reiniciar nem atualizar.'
+  },
+  {
     question: 'Preciso pagar mensalidade de hospedagem?',
     answer:
-      'Não enquanto a infraestrutura utilizada permitir manter o projeto sem esse custo. Se o ' +
-      'crescimento do site, sistema ou aplicação exigir um plano pago ou outro serviço externo, ' +
-      'você é informado sobre o custo antes de qualquer contratação.'
+      'Depende do projeto, e isso é avaliado antes de fechar — não depois. Boa parte dos ' +
+      'projetos roda bem em uma infraestrutura sem custo mensal, e nesse caso você não paga ' +
+      'mensalidade nenhuma.\n\n' +
+      'Quando a solução exige servidor ou serviço pago — pelo tipo de sistema, pelo volume de ' +
+      'dados ou pelo crescimento ao longo do tempo — eu te digo isso na proposta, com o custo na ' +
+      'mesa. Nunca aparece uma cobrança que não foi combinada antes.'
   },
   {
     question: 'E o domínio, o endereço do site?',

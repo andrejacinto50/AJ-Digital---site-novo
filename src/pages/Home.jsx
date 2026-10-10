@@ -30,7 +30,7 @@ const stats = [
   ['3 meses', 'de acompanhamento']
 ];
 
-const projectOrder = [
+const modelOrder = [
   'loja-premium-whatsapp',
   'barbearia-monarch',
   'restaurante-multipage',
@@ -39,12 +39,18 @@ const projectOrder = [
   'barbearia-premium-multipagina'
 ];
 
-const orderedProjects = projectOrder
+const orderedModels = modelOrder
   .map((slug) => projects.find((project) => project.slug === slug))
   .filter(Boolean);
 
-const featuredProject = orderedProjects[0];
-const otherProjects = orderedProjects.slice(1);
+/**
+ * Projeto de cliente lidera o portfólio do Início: é o único que prova entrega
+ * real. Sem cliente publicado, o primeiro modelo assume o destaque.
+ */
+const clientProject = projects.find((project) => project.kind === 'cliente');
+
+const featuredProject = clientProject || orderedModels[0];
+const otherProjects = clientProject ? orderedModels : orderedModels.slice(1);
 
 /**
  * Dores concretas no lugar de benefícios genéricos: quem se reconhece em uma
@@ -129,7 +135,7 @@ export default function Home() {
             </a>
 
             <a className="secondary-btn" href="/portfolio">
-              Ver os modelos
+              Ver projetos criados
             </a>
           </div>
 
@@ -293,15 +299,19 @@ export default function Home() {
       <section className="section-padding portfolio-premium-section">
         <SectionTitle
           eyebrow="Portfólio"
-          title="Modelos criados para diferentes segmentos"
-          text="Demonstrações navegáveis que mostram o padrão de entrega: visual, velocidade e integração com WhatsApp. Projetos de clientes entram aqui conforme forem publicados."
+          title="Um projeto de cliente no ar e modelos para cada segmento"
+          text="O primeiro é o site de uma empresa real, no domínio dela. Os outros são demonstrações navegáveis que mostram o padrão de entrega: visual, velocidade e integração com WhatsApp."
         />
 
         <div className="premium-portfolio-layout">
           {featuredProject && (
             <Reveal className="featured-project-wrap">
               <div className="featured-project-label">
-                <span>Modelo em destaque</span>
+                <span>
+                  {featuredProject.kind === 'cliente'
+                    ? 'Projeto de cliente no ar'
+                    : 'Modelo em destaque'}
+                </span>
                 <strong>{featuredProject.searchTitle || featuredProject.title}</strong>
               </div>
 
@@ -320,7 +330,7 @@ export default function Home() {
 
         <div className="section-more only-mobile">
           <Link className="secondary-btn" to="/portfolio">
-            Ver os 6 modelos <ArrowRight size={17} />
+            Ver o portfólio completo <ArrowRight size={17} />
           </Link>
         </div>
       </section>

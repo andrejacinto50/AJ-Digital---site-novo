@@ -45,6 +45,7 @@ export default function ProjectDetails() {
   }
 
   const isModel = project.kind === 'modelo';
+  const isClient = project.kind === 'cliente';
 
   const relacionados = (project.related || [])
     .map((slug) => projects.find((item) => item.slug === slug))
@@ -75,7 +76,16 @@ export default function ProjectDetails() {
               </span>
             )}
 
-            <span className="project-model-name">{project.title}</span>
+            {isClient && (
+              <span className="project-kind-badge is-static is-client">
+                <BadgeCheck size={13} /> Projeto de cliente · no ar
+              </span>
+            )}
+
+            <span className="project-model-name">
+              {project.title}
+              {project.clientLocation ? ` · ${project.clientLocation}` : ''}
+            </span>
           </div>
 
           <h1>{project.searchTitle || project.title}</h1>
@@ -89,7 +99,7 @@ export default function ProjectDetails() {
               target="_blank"
               rel="noreferrer"
             >
-              Abrir projeto <ExternalLink size={18} />
+              {isClient ? 'Abrir o site do cliente' : 'Abrir projeto'} <ExternalLink size={18} />
             </a>
 
             <a
@@ -108,6 +118,14 @@ export default function ProjectDetails() {
               entrega. Pode abrir e navegar à vontade — o projeto da sua empresa é feito do zero,
               com o conteúdo, as cores e as funcionalidades que fizerem sentido para o seu
               negócio.
+            </p>
+          )}
+
+          {isClient && (
+            <p className="project-detail-disclaimer">
+              Este é um projeto de cliente, desenvolvido pela AJ Digital e publicado no domínio
+              próprio da empresa. Não é demonstração: é o site que ela usa para receber contato
+              todo dia.
             </p>
           )}
         </Reveal>
@@ -160,7 +178,7 @@ export default function ProjectDetails() {
         <div className="project-overview-grid">
           <Reveal className="project-overview-card">
             <span className="eyebrow">Visão geral</span>
-            <h2>O que esse modelo entrega</h2>
+            <h2>{isModel ? 'O que esse modelo entrega' : 'O que foi desenvolvido'}</h2>
             <p>{project.longDescription}</p>
 
             {project.result && (
@@ -189,7 +207,7 @@ export default function ProjectDetails() {
       <section className="section-padding project-highlights-section">
         <Reveal className="project-section-heading">
           <span className="eyebrow">Destaques principais</span>
-          <h2>Principais diferenciais desse modelo</h2>
+          <h2>{isModel ? 'Principais diferenciais desse modelo' : 'Principais diferenciais do projeto'}</h2>
         </Reveal>
 
         <div className="project-highlights-grid">
@@ -206,7 +224,7 @@ export default function ProjectDetails() {
         <div className="project-feature-layout">
           <Reveal className="project-feature-copy">
             <span className="eyebrow">Estrutura completa</span>
-            <h2>Tudo que esse projeto pode incluir</h2>
+            <h2>{isModel ? 'Tudo que esse projeto pode incluir' : 'Tudo que esse projeto inclui'}</h2>
             <p>
               Uma estrutura pensada para apresentar melhor a empresa, valorizar seus serviços
               ou produtos e facilitar a decisão do cliente.
@@ -227,7 +245,7 @@ export default function ProjectDetails() {
       <section className="section-padding project-benefits-section">
         <Reveal className="project-section-heading">
           <span className="eyebrow">Benefícios para o negócio</span>
-          <h2>Por que esse modelo pode fazer diferença</h2>
+          <h2>{isModel ? 'Por que esse modelo pode fazer diferença' : 'Por que esse projeto faz diferença'}</h2>
         </Reveal>
 
         <div className="project-benefits-grid">
@@ -239,6 +257,61 @@ export default function ProjectDetails() {
           ))}
         </div>
       </section>
+
+      {project.engenharia && (
+        <section className="section-padding project-engine-section">
+          <SectionTitle
+            eyebrow="Como foi construído"
+            title={project.engenharia.title}
+            text={project.engenharia.intro}
+          />
+
+          <div className="project-spec-grid">
+            {project.engenharia.pontos.map(([Icon, nome, texto]) => (
+              <Reveal className="project-spec-card" key={nome}>
+                <Icon size={24} />
+
+                <div>
+                  <h3>{nome}</h3>
+                  <p>{texto}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {project.admin && (
+        <section className="section-padding project-admin-section">
+          <SectionTitle
+            eyebrow="Painel administrativo"
+            title={project.admin.title}
+            text={project.admin.intro}
+          />
+
+          <div className="project-admin-screens">
+            {project.admin.telas.map(([nome, texto]) => (
+              <Reveal className="project-admin-screen" key={nome}>
+                <h3>{nome}</h3>
+                <p>{texto}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="project-spec-grid">
+            {project.admin.recursos.map(([Icon, nome, texto]) => (
+              <Reveal className="project-spec-card" key={nome}>
+                <Icon size={24} />
+
+                <div>
+                  <h3>{nome}</h3>
+                  <p>{texto}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="section-padding project-mobile-section">
         <div className="project-mobile-content">
@@ -312,7 +385,7 @@ export default function ProjectDetails() {
       {project.faq?.length > 0 && (
         <section className="section-padding project-faq-section">
           <SectionTitle
-            eyebrow="Dúvidas desse modelo"
+            eyebrow={isModel ? 'Dúvidas desse modelo' : 'Dúvidas desse projeto'}
             title="O que costumam perguntar antes de fechar"
             text="Preço, prazo e garantia estão respondidos na página inicial. Aqui ficam as dúvidas específicas desse tipo de projeto."
           />

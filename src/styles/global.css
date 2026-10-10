@@ -12,6 +12,8 @@
   --line: rgba(255,255,255,.1);
   --glass: rgba(255,255,255,.055);
   --shadow: 0 30px 90px rgba(0,0,0,.5);
+  /* Verde reservado para "no ar": separa projeto de cliente dos modelos, que usam o dourado. */
+  --live: #4ade80;
 }
 
 /* RESET */
@@ -5527,6 +5529,246 @@ html.aj-mobile .whatsapp-float {
 }
 
 /* Bloco que explica que os projetos sao modelos, nao clientes */
+/* Selo de projeto de cliente: mesma forma do selo de modelo, cor de "no ar". */
+.project-kind-badge.is-client {
+  border-color: rgba(74, 222, 128, .45);
+  color: var(--live);
+}
+
+/* ==========================================================================
+   PORTFOLIO: DESTAQUE DO PROJETO DE CLIENTE
+   ========================================================================== */
+
+.portfolio-clients-section {
+  padding-bottom: 20px;
+}
+
+.portfolio-client-showcase {
+  display: grid;
+  /* Texto primeiro, print depois: no celular a ordem vira uma coluna só. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--glass);
+  box-shadow: var(--shadow);
+}
+
+.portfolio-client-copy h3 {
+  margin: 16px 0 4px;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.portfolio-client-local {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold-2);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.portfolio-client-copy p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.portfolio-client-highlights {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-client-highlights li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: .95rem;
+}
+
+.portfolio-client-highlights svg {
+  flex-shrink: 0;
+  color: var(--live);
+}
+
+.portfolio-client-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.portfolio-client-shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  line-height: 0;
+}
+
+.portfolio-client-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: .7s ease;
+}
+
+.portfolio-client-shot:hover img {
+  transform: scale(1.04);
+}
+
+@media (min-width: 900px) {
+  .portfolio-client-showcase {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 38px;
+    padding: 38px;
+  }
+
+  .portfolio-client-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   SERVICOS: CASE DE CLIENTE DENTRO DA SECAO "COMO E CONSTRUIDO"
+   ========================================================================== */
+
+.services-case-note {
+  display: grid;
+  /* Print primeiro no celular; no desktop ele vai para a esquerda, em coluna menor. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 34px auto 0;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--glass);
+}
+
+.services-case-shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  line-height: 0;
+}
+
+.services-case-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: .7s ease;
+}
+
+.services-case-shot:hover img {
+  transform: scale(1.04);
+}
+
+.services-case-copy h3 {
+  margin: 14px 0 10px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.services-case-copy p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.services-case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .services-case-note {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1fr);
+    gap: 34px;
+    padding: 32px;
+  }
+}
+
+/* ==========================================================================
+   DETALHE: PAINEL ADMINISTRATIVO DO PROJETO
+   ========================================================================== */
+
+.project-admin-screens {
+  display: grid;
+  /* min() impede a coluna de ficar maior que a tela no celular. */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto 22px;
+}
+
+.project-admin-screen {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--glass);
+}
+
+.project-admin-screen h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.project-admin-screen p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .93rem;
+  line-height: 1.65;
+}
+
+.project-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.project-spec-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  /* Barra dourada separa o "como funciona por dentro" da lista de telas. */
+  border-left: 3px solid var(--gold);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .03);
+}
+
+.project-spec-card svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.project-spec-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.project-spec-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
 .portfolio-models-note {
   display: flex;
   gap: 18px;

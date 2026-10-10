@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react';
 import {
   ArrowRight,
+  BadgeCheck,
   Code2,
+  ExternalLink,
   FlaskConical,
   MessageCircle,
   MonitorSmartphone,
@@ -9,6 +11,8 @@ import {
   Sparkles,
   Zap
 } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
 
 import PageTransition from '../components/PageTransition.jsx';
 import Seo from '../components/Seo.jsx';
@@ -19,8 +23,12 @@ import ProjectCard from '../components/ProjectCard.jsx';
 import CTA from '../components/CTA.jsx';
 import { projects } from '../data/projects.js';
 
+/** Projetos de cliente e modelos nunca se misturam — a separacao e visivel na pagina. */
+const clientes = projects.filter((project) => project.kind === 'cliente');
+const modelos = projects.filter((project) => project.kind !== 'cliente');
+
 const portfolioStats = [
-  ['6', 'modelos prontos'],
+  [String(modelos.length), 'modelos prontos'],
   ['7 a 30', 'dias de entrega'],
   ['12 meses', 'de garantia'],
   ['3 meses', 'de acompanhamento']
@@ -48,13 +56,13 @@ export default function Portfolio() {
   const [segmento, setSegmento] = useState('Todos');
 
   const segmentos = useMemo(
-    () => ['Todos', ...new Set(projects.map((project) => project.category))],
+    () => ['Todos', ...new Set(modelos.map((project) => project.category))],
     []
   );
 
   const projetosVisiveis = useMemo(
     () =>
-      [...projects]
+      [...modelos]
         // Projeto em destaque primeiro, como acontece no inicio.
         .sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)))
         .filter((project) => segmento === 'Todos' || project.category === segmento),
@@ -77,9 +85,9 @@ export default function Portfolio() {
           </h1>
 
           <p>
-            Modelos demonstrativos criados pela AJ Digital para diferentes segmentos, com visual
-            profissional, experiência mobile e tecnologia moderna. Cada um pode ser aberto e
-            navegado no celular ou no computador.
+            Projetos de clientes no ar e modelos demonstrativos criados pela AJ Digital, com
+            visual profissional, experiência mobile e tecnologia moderna. Todos podem ser abertos
+            e navegados no celular ou no computador.
           </p>
 
           <div className="portfolio-hero-actions">
@@ -92,8 +100,8 @@ export default function Portfolio() {
               Quero um projeto nesse nível <ArrowRight size={18} />
             </a>
 
-            <a className="secondary-btn" href="#modelos">
-              Ver modelos
+            <a className="secondary-btn" href="#clientes">
+              Ver projeto no ar
             </a>
           </div>
         </Reveal>
@@ -140,10 +148,75 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {clientes.length > 0 && (
+        <section id="clientes" className="section-padding portfolio-clients-section">
+          <SectionTitle
+            eyebrow="Projeto de cliente"
+            title="Empresa real, site no ar, domínio próprio"
+            text="Não é demonstração: é o site que a empresa usa todo dia para receber contato de cliente. Pode abrir e navegar."
+          />
+
+          {clientes.map((project) => (
+            <Reveal className="portfolio-client-showcase" key={project.slug}>
+              <div className="portfolio-client-copy">
+                <span className="project-kind-badge is-static is-client">
+                  <BadgeCheck size={13} /> Projeto de cliente · no ar
+                </span>
+
+                <h3>{project.title}</h3>
+
+                {project.clientLocation && (
+                  <span className="portfolio-client-local">{project.clientLocation}</span>
+                )}
+
+                {project.clientLead && <p>{project.clientLead}</p>}
+
+                <p>{project.description}</p>
+
+                <ul className="portfolio-client-highlights">
+                  {project.highlights.map((item) => (
+                    <li key={item}>
+                      <BadgeCheck size={16} /> {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="portfolio-client-actions">
+                  <a
+                    className="primary-btn"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Abrir o site <ExternalLink size={17} />
+                  </a>
+
+                  <Link className="secondary-btn" to={`/portfolio/${project.slug}`}>
+                    Ver o que foi desenvolvido
+                  </Link>
+                </div>
+              </div>
+
+              <Link className="portfolio-client-shot" to={`/portfolio/${project.slug}`}>
+                <img
+                  src={project.image}
+                  alt={`Site da ${project.title} desenvolvido pela AJ Digital`}
+                  width="1280"
+                  height="640"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </Link>
+            </Reveal>
+          ))}
+        </section>
+      )}
+
       <section id="modelos" className="section-padding portfolio-projects-section">
         <SectionTitle
-          eyebrow="Modelos em destaque"
-          title="Projetos criados para diferentes segmentos"
+          eyebrow="Modelos demonstrativos"
+          title="Modelos criados para diferentes segmentos"
           text="Use esses modelos como referência para imaginar o nível de presença digital, experiência e automação que sua empresa pode ter."
         />
 
@@ -159,7 +232,7 @@ export default function Portfolio() {
 
             <p>
               São demonstrações navegáveis — pode abrir, clicar e testar no celular. Projetos de
-              clientes entram aqui conforme forem publicados.
+              clientes ficam na seção acima, conforme vão sendo publicados.
             </p>
           </div>
         </Reveal>

@@ -1,4 +1,276 @@
+import {
+  CloudOff,
+  Code2,
+  DatabaseBackup,
+  History,
+  ImageDown,
+  Lock,
+  ServerOff,
+  Share2,
+  Users,
+  Zap
+} from 'lucide-react';
+
 export const projects = [
+  {
+    slug: 'gcr-guia-turistico',
+    title: 'GCR Guia Turístico',
+    category: 'Turismo',
+    // 'modelo' = demonstracao criada pela AJ Digital; 'cliente' = projeto real publicado.
+    kind: 'cliente',
+    // Dados que so existem em projeto de cliente — o detalhe usa para o bloco de contexto.
+    client: 'GCR Guia Turístico',
+    clientLocation: 'Governador Celso Ramos, SC',
+    // Abertura do destaque no portfolio — a historia completa fica no detalhe.
+    clientLead:
+      'Empresa de turismo receptivo de Governador Celso Ramos, com Cadastur e mais de 16 anos ' +
+      'divulgando os atrativos da cidade.',
+    image: '/gcr.webp',
+    link: 'https://gcrguiaturistico.com.br/',
+    searchTitle: 'Site para empresa de turismo com passeios e reserva pelo WhatsApp',
+
+    searchDescription:
+      'Projeto de cliente no ar: site de turismo receptivo com página para cada passeio, ' +
+      'datas disponíveis, recomendação personalizada e reserva direto no WhatsApp.',
+
+    related: [],
+
+    /**
+     * Painel proprio entregue junto com o site. E o que separa um site bonito de
+     * um sistema: quem usa publica sozinho e fica registrado quem mudou o que.
+     */
+    admin: {
+      title: 'Um painel próprio, com nove telas e mais de setenta campos',
+
+      intro:
+        'O site não é administrado por mim — é administrado pela equipe da GCR, em um painel ' +
+        'desenvolvido junto com ele. O que é salvo aparece no site na hora, sem etapa de ' +
+        'publicação e sem precisar acionar a agência. Entre as telas:',
+
+      telas: [
+        ['Passeios', 'Cadastro de cada passeio: estilo, duração, descrição e imagens.'],
+        ['Roteiros', 'O roteiro de cada passeio, montado etapa por etapa.'],
+        ['Galeria', 'As fotos do site, organizadas por categoria.'],
+        ['Agenda', 'Dias bloqueados e dias lotados — o visitante só escolhe data que existe.'],
+        ['Monte sua experiência', 'As opções do recomendador que leva o visitante ao WhatsApp.'],
+        ['Contato e configurações', 'Dados de contato e informações gerais usadas no site inteiro.']
+      ],
+
+      recursos: [
+        [
+          Users,
+          'Login individual',
+          'Cada pessoa entra com o próprio acesso, e dá para controlar quem continua ativo.'
+        ],
+        [
+          History,
+          'Histórico de alterações',
+          'Toda mudança fica registrada com autor e data. Dá para saber quem alterou o quê, e quando.'
+        ],
+        [
+          ImageDown,
+          'Fotos otimizadas no envio',
+          'A imagem é convertida para um formato leve e redimensionada automaticamente, sem perder qualidade.'
+        ],
+        [
+          Zap,
+          'No ar na hora',
+          'O que é salvo aparece no site imediatamente — sem fila de publicação e sem depender do desenvolvedor.'
+        ]
+      ]
+    },
+
+    /**
+     * O que separa um projeto sob medida de um site montado em plataforma.
+     * Cada ponto e uma decisao de arquitetura com consequencia pratica para o cliente.
+     */
+    engenharia: {
+      title: 'Por que esse site não é um tema comprado',
+
+      intro:
+        'Nada aqui veio de WordPress, tema pronto ou construtor de páginas. O projeto foi escrito ' +
+        'para a GCR, e isso tem consequência prática no dia a dia:',
+
+      pontos: [
+        [
+          Code2,
+          'Escrito do zero',
+          'Sem tema comprado e sem plugin de terceiro. Nenhuma licença para renovar, nenhum plugin para atualizar e nenhuma brecha herdada de código que não é nosso.'
+        ],
+        [
+          ServerOff,
+          'Sem servidor para manter',
+          'O site fica em CDN global e o banco é gerenciado. Não existe máquina para reiniciar, atualizar ou cair de madrugada.'
+        ],
+        [
+          DatabaseBackup,
+          'Backup diário automático',
+          'Todo dia, conteúdo e imagens são exportados e versionados. Dá para voltar o site a como ele estava em qualquer dia anterior.'
+        ],
+        [
+          Share2,
+          'Link que abre certo no WhatsApp',
+          'As páginas são pré-renderizadas na publicação, então cada passeio tem título, descrição e imagem próprios ao ser compartilhado — e o Google lê a página inteira.'
+        ],
+        [
+          Lock,
+          'Dados do painel protegidos',
+          'As tabelas administrativas não são acessíveis pela chave pública do site. Quem abre o site não alcança o que está por trás do painel.'
+        ],
+        [
+          CloudOff,
+          'Site de pé mesmo se o banco cair',
+          'O projeto guarda um retrato do conteúdo publicado. Se o banco ficar indisponível, o site continua no ar com esse retrato em vez de quebrar.'
+        ]
+      ]
+    },
+
+    faq: [
+      {
+        question: 'Esse é um projeto real ou um modelo?',
+        answer:
+          'Real. A GCR Guia Turístico é uma empresa de Governador Celso Ramos, com Cadastur e ' +
+          'mais de 16 anos de atuação, e o site está no ar no domínio próprio dela. Pode abrir e ' +
+          'navegar — é o site que os visitantes da cidade usam.'
+      },
+      {
+        question: 'O cliente consegue atualizar o site sozinho?',
+        answer:
+          'Sozinho e sem me avisar. Junto com o site foi desenvolvido um painel próprio, com nove ' +
+          'telas e mais de setenta campos editáveis: passeios, roteiros, galeria, agenda de dias ' +
+          'bloqueados e lotados, recomendador e dados da empresa.\n\n' +
+          'O acesso é por login individual, toda alteração fica registrada com autor e data, e o ' +
+          'que é salvo aparece no site na hora — sem etapa de publicação.'
+      },
+      {
+        question: 'Como funciona a recomendação de passeio?',
+        answer:
+          'O visitante escolhe o estilo do passeio, informa a quantidade de pessoas e, nos ' +
+          'passeios conduzidos pela GCR, uma data disponível. O site monta a sugestão e abre o ' +
+          'WhatsApp com a mensagem já preenchida — o atendimento começa sabendo o que a pessoa quer.'
+      },
+      {
+        question: 'Esse site é WordPress?',
+        answer:
+          'Não. Foi escrito do zero em React, com banco PostgreSQL e hospedagem em CDN global. ' +
+          'Não existe tema comprado, plugin de terceiro nem licença para renovar — e, por ' +
+          'consequência, nenhuma atualização de plugin para fazer e nenhuma brecha herdada.'
+      },
+      {
+        question: 'Dá para fazer algo parecido para outro segmento?',
+        answer:
+          'Dá. A estrutura — página para cada serviço, disponibilidade, recomendação e contato com ' +
+          'mensagem pronta — serve para qualquer negócio que vende experiência ou serviço com ' +
+          'agenda. Muda o conteúdo, não a engenharia.'
+      }
+    ],
+    gradient: 'gold',
+    featured: true,
+
+    description:
+      'Site de turismo receptivo com página para cada passeio, datas disponíveis, recomendação personalizada e reserva pelo WhatsApp — mais um painel próprio de nove telas para a equipe tocar o conteúdo sozinha.',
+
+    longDescription:
+      'A GCR Guia Turístico é uma empresa de Governador Celso Ramos, em Santa Catarina, com Cadastur e mais de 16 anos divulgando os atrativos da cidade. O projeto tirou a operação do perfil de rede social e colocou tudo em endereço próprio: página para cada passeio, galeria, história da empresa, avaliações reais do Google e um caminho curto até a reserva no WhatsApp. Junto com o site foi desenvolvido um painel próprio, com nove telas e mais de setenta campos editáveis, para a equipe manter passeios, roteiros, galeria e agenda em dia sem depender do desenvolvedor.',
+
+    objective:
+      'Transformar o interesse de quem pesquisa a cidade em reserva, sem o visitante precisar perguntar o básico no WhatsApp.',
+
+    positioning:
+      'Projeto de cliente, no ar em domínio próprio. Serve de referência para empresas de turismo, passeios e experiências que hoje atendem só pelo Instagram.',
+
+    highlights: [
+      // Os tres primeiros aparecem no card do portfolio — painel na frente, que e o que diferencia.
+      'Projeto de cliente no ar',
+      'Painel próprio com 9 telas',
+      'Recomendação personalizada',
+      'Página para cada passeio'
+    ],
+
+    features: [
+      'Site multipágina com domínio próprio',
+      'Página individual para cada passeio',
+      'Duração, estilo e detalhes de cada experiência',
+      'Datas disponíveis nos passeios conduzidos pela empresa',
+      'Recomendação personalizada por estilo de passeio',
+      'Quantidade de pessoas considerada na sugestão',
+      'Mensagem de WhatsApp preenchida com o passeio escolhido',
+      'Galeria de fotos da cidade e dos passeios',
+      'Avaliações reais do Google em destaque',
+      'Página sobre a empresa, com Cadastur e credenciamento',
+      'Página de contato com WhatsApp, e-mail e Instagram',
+      'Painel próprio com nove telas e mais de setenta campos editáveis',
+      'Login individual, com controle de quem continua ativo',
+      'Histórico de alterações com autor e data',
+      'Fotos otimizadas e redimensionadas automaticamente no envio',
+      'Alteração salva aparece no site na hora, sem etapa de publicação',
+      'Estrutura mobile first, para quem pesquisa no celular',
+      'SEO preparado para buscas pela cidade e pelos passeios'
+    ],
+
+    benefits: [
+      'Endereço próprio no lugar de depender só do Instagram',
+      'Visitante chega no WhatsApp já sabendo o que quer',
+      'Menos pergunta repetida no atendimento',
+      'Credenciamento e legalidade visíveis logo de cara',
+      'Avaliações reais reforçando a confiança',
+      'Passeios apresentados com o valor que têm',
+      'Equipe publica passeio, foto e data sem depender de ninguém',
+      'Presença encontrável no Google pela cidade',
+      'Experiência boa no celular, onde o turista pesquisa',
+      'Base pronta para crescer com novos passeios'
+    ],
+
+    idealFor: [
+      'Guias de turismo',
+      'Agências de turismo receptivo',
+      'Passeios de barco e lancha',
+      'Trilhas e ecoturismo',
+      'Esportes de aventura',
+      'Pousadas e hospedagem',
+      'Experiências com agenda e disponibilidade'
+    ],
+
+    sections: [
+      'Início',
+      'Passeios',
+      'Página de cada passeio',
+      'Sobre',
+      'Galeria',
+      'Contato',
+      'Painel administrativo'
+    ],
+
+    technologies: [
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Supabase',
+      'Autenticação e permissões',
+      'Armazenamento de imagens',
+      'CDN global',
+      'HTTPS automático',
+      'Páginas pré-renderizadas',
+      'Backup diário',
+      'Mobile First',
+      'Domínio próprio'
+    ],
+
+    mobileExperience:
+      'O turista pesquisa a cidade no celular, quase sempre já viajando. O site foi construído para esse cenário: carrega rápido, apresenta o passeio em poucas telas e leva ao WhatsApp com a mensagem pronta.',
+
+    appPossibility:
+      'A estrutura permite evoluir para reserva com pagamento online, área do cliente ou aplicativo, conforme a empresa quiser avançar.',
+
+    result:
+      'A GCR Guia Turístico passou a ter endereço próprio, com os passeios apresentados em detalhe e um caminho direto até a reserva no WhatsApp.',
+
+    ctaText: 'Quero um projeto como esse',
+    ctaMessage:
+      'Olá, vi o projeto da GCR Guia Turístico no site da AJ Digital e quero algo nesse nível para a minha empresa.'
+  },
+
   {
     slug: 'loja-premium-whatsapp',
     title: 'Loja Premium WhatsApp',

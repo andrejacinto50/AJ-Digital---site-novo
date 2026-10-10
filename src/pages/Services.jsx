@@ -2,10 +2,13 @@ import {
   ArrowRight,
   BadgeCheck,
   Code2,
+  DatabaseBackup,
   Layers3,
   MessageCircle,
   MonitorSmartphone,
   Rocket,
+  ServerOff,
+  Share2,
   ShoppingBag,
   Smartphone,
   Target,
@@ -19,7 +22,10 @@ import Reveal from '../components/Reveal.jsx';
 import SectionTitle from '../components/SectionTitle.jsx';
 import ServiceCatalog from '../components/ServiceCatalog.jsx';
 import Faq from '../components/Faq.jsx';
+import { Link } from 'react-router-dom';
+
 import { guarantees } from '../data/guarantees.js';
+import { projects } from '../data/projects.js';
 import { positioning } from '../data/catalog.js';
 import CTA from '../components/CTA.jsx';
 
@@ -62,6 +68,36 @@ const serviceSteps = [
   ['03', 'Desenvolvimento', 'Criamos o site, sistema, aplicativo ou automação com tecnologia moderna e foco em eficiência.'],
   ['04', 'Implantação', 'Publicamos, configuramos e deixamos a solução pronta para ajudar sua empresa no dia a dia.']
 ];
+
+/**
+ * O que separa um projeto sob medida de um site montado em plataforma — e o que
+ * sustenta a diferença de preço da tabela.
+ */
+const construcao = [
+  [
+    Code2,
+    'Escrito do zero',
+    'Sem WordPress, sem tema comprado e sem construtor de páginas. Nenhuma licença para renovar e nenhum plugin de terceiro para atualizar.'
+  ],
+  [
+    ServerOff,
+    'Sem servidor para manter',
+    'O projeto fica em CDN global, com HTTPS emitido e renovado automaticamente. Não existe máquina para reiniciar ou cair de madrugada.'
+  ],
+  [
+    DatabaseBackup,
+    'Backup do conteúdo',
+    'Em projetos com painel, dá para incluir uma rotina diária que exporta conteúdo e imagens e guarda o histórico — dá para voltar o site a qualquer dia anterior.'
+  ],
+  [
+    Share2,
+    'Preparado para busca e compartilhamento',
+    'As páginas são montadas para que o link compartilhado mostre título, descrição e imagem corretos, e para o Google ler o conteúdo em vez de uma página vazia.'
+  ]
+];
+
+/** O case que prova na pratica o que os quatro cards acima afirmam. */
+const caseCliente = projects.find((project) => project.slug === 'gcr-guia-turistico');
 
 const idealFor = [
   'Empresas que ainda não têm site profissional',
@@ -263,6 +299,72 @@ export default function Services() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section className="section-padding services-main-section">
+        <SectionTitle
+          eyebrow="Como é construído"
+          title="Feito sob medida, não montado em plataforma"
+          text="É aqui que mora a diferença entre um site de agência e um site montado em construtor — e o motivo de o valor não ser o mesmo."
+        />
+
+        <div className="services-premium-grid">
+          {construcao.map(([Icon, title, description]) => (
+            <Reveal className="services-premium-card" key={title}>
+              <div className="services-card-icon">
+                <Icon size={28} />
+              </div>
+
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </Reveal>
+          ))}
+        </div>
+
+        {caseCliente && (
+          <Reveal className="services-case-note">
+            <Link className="services-case-shot" to={`/portfolio/${caseCliente.slug}`}>
+              <img
+                src={caseCliente.image}
+                alt={`Site da ${caseCliente.title} desenvolvido pela AJ Digital`}
+                width="1280"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
+
+            <div className="services-case-copy">
+              <span className="project-kind-badge is-static is-client">
+                <BadgeCheck size={13} /> Projeto de cliente · no ar
+              </span>
+
+              <h3>Isso tudo está num projeto no ar</h3>
+
+              <p>
+                O site da {caseCliente.title}, em {caseCliente.clientLocation}, foi construído
+                assim: painel próprio com nove telas para a equipe publicar sozinha, backup diário
+                do conteúdo e das imagens, e cada passeio com página própria que abre certo no
+                WhatsApp e no Google.
+              </p>
+
+              <div className="services-case-actions">
+                <Link className="primary-btn" to={`/portfolio/${caseCliente.slug}`}>
+                  Ver como foi construído <ArrowRight size={17} />
+                </Link>
+
+                <a
+                  className="secondary-btn"
+                  href={caseCliente.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Abrir o site
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        )}
       </section>
 
       <section className="section-padding services-faq-section">
